@@ -1,5 +1,7 @@
- #Receitas-à-la-Web.
+#  Receitas à la Web.
 
-#Participantes:   Walquiria Gonçalves Barbosa, Natalia Dias Fernandes e Letícia Novaes Antunes.
+## Participantes: 
+<p>Walquiria Gonçalves Barbosa, Natalia Dias Fernandes e Letícia Novaes Antunes.</p>
 
-#Tema: Site de Receitas, onde os usuários poderão publicar receitas,  realizar comentários e fazer avaliações das receitas publicadas.   
+## Tema: 
+<p>Site de Receitas, onde os usuários poderão publicar receitas,  realizar comentários e fazer avaliações das receitas publicadas. </p>
