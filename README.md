@@ -1,4 +1,4 @@
-#  Receitas à la Web.
+#  Receitas à la Web
 
 ## Participantes: 
 <p>Walquiria Gonçalves Barbosa, Natalia Dias Fernandes e Letícia Novaes Antunes.</p>
