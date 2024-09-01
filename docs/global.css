@@ -48,6 +48,10 @@ table {
 }
 
 /* CSS principal */
+body {
+    font-family: sans-serif;
+}
+
 h1 {
     font-size: 32px;
     font-weight: 900;

@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acessar receitas à la web</title>
     <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="painel.css">
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="painel-login"> 
-        <div class="form-acesso">
+    <div class="painel"> 
+        <div class="painel-formulario">
             <h1>Bem vindo(a) a Receitas à la Web!</h1>
         
             <form>
-                <input class="input" type="email" placeholder="example@gmail.com">
-                <input class="input" type="password" placeholder="******">
+                <input class="input" type="email" placeholder="example@gmail.com" required>
+                <input class="input" type="password" placeholder="******" required>
                 <div class="opcao-usuario">
                     <label for="Lembrar-Senha">
                         <input type="checkbox" id="Lembrar-Senha">
@@ -25,7 +26,7 @@
                 <button class="btn-principal" type="submit">Acessar</button>
             </form>
             <hr>
-            <span>Ainda não possui uma conta? <a class="link-principal link-bold" href="#">Cadastre-se</a></span>
+            <span>Ainda não possui uma conta? <a class="link-principal link-bold" href="cadastro.html">Cadastre-se</a></span>
         </div>
         <img src="img/imagem-login.jpg" alt="imagem de um doce">
 
