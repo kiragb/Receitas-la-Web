@@ -4,18 +4,20 @@
         <title>Receita à la Web</title>
     </head>
     <body>
+      <h1> Formulario de postagem de Receitas</h1>
+      <p>Os campos marcados em * indicam campos obrigatorios</p>
         <form method="post">
             <label id="capaReceita">Imagem de Capa: </label>
-            <input type="image"><br>
+            <input type="image" required><br>
 
             <label id="nomeReceita">Prato: </label>
-            <input id="nomeReceita" type="text" placeholder="Nome do prato"><br>
+            <input id="nomeReceita" type="text" placeholder="Nome do prato" required><br>
 
             <label id="ingredienteReceita">Ingredientes: </label>
-            <input id="ingredienteReceita" type="text" placeholder="Escreva enm lista todos os ingredientes necessários"><br>
+            <input id="ingredienteReceita" type="text" placeholder="Escreva enm lista todos os ingredientes necessários" required><br>
 
             <label>Passo à Passo: </label>
-            <textarea id="etapasReceita" type="text" placeholder="Descreva o passo á passo para prepara o prato" rows="4" cols="50">
+            <textarea id="etapasReceita" type="text" placeholder="Descreva o passo á passo para prepara o prato" rows="4" cols="50" required>
                 Etapa 1:
                  - 
                  -
@@ -31,6 +33,10 @@
             </select>
             <label>Esta é uma receita Tematica?</label>
             <input type="checkbox"><br>
+            <button class="btn-principal" type="submit">Enviar </button>
+            <button class="btn-principal" type="reset">Limpar </button>
+
         </form>
+        
     </body>
 </html>
