@@ -70,3 +70,35 @@
   transform: translate(-50%, -50%);
   font-size: 18px;
 }
+
+form{
+  position: fixed;
+  padding: 10px;
+  left: 300px;
+}
+
+
+.search-btn{
+
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ed074c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+}
+
+
+.busca{
+  border-radius: 16px;
+  border:none;
+  padding: 10px 24px;
+  display: inline-block;
+  margin: 4px 0;
+  cursor: pointer;
+}
