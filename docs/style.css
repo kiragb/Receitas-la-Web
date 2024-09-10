@@ -1,0 +1,39 @@
+#navbar{
+  position: fixed;
+  right: 30px;
+  padding: 10px;
+}
+
+.navButton{
+  text-decoration: none;
+  border: none;
+  border-radius: 16px;
+  color: black;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 0;
+  cursor: pointer;
+  background-color: #fedce0;
+}
+
+.navLink{
+  text-decoration: none;
+  border: none;
+  border-radius: 16px;
+  color: black;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.navLink:hover{
+   background-color: #fedce0;
+   color: white;
+}
+
+.navButton:hover{
+    color: white;
+}
