@@ -37,3 +37,36 @@
 .navButton:hover{
     color: white;
 }
+
+#imgLinks{
+    display: flex;
+    justify-content: flex-start; /* Ajusta o alinhamento horizontal */
+    padding: 200px; 
+}
+
+.linkContainer {
+    position: relative; /* Necessário para o posicionamento absoluto do texto */
+    margin: 0 10px; /* Espaço entre as imagens */
+}
+
+.linkImage{
+  opacity: 0.5;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: block; /* Remove o espaçamento em linha */
+  cursor: pointer;
+}
+
+.linkImage:hover{
+  filter: grayscale(50%);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
