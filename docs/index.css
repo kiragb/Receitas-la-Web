@@ -13,13 +13,13 @@ src: url(fonte/SansitaOne.ttf);
 }
 
   
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      padding-top: 10px;
-      font-size: 30px;
-      font-family: Sansita One;
-    }
+h2 {
+text-align: center;
+margin-bottom: 20px;
+padding-top: 10px;
+font-size: 30px;
+font-family: Sansita One;
+}
     
 
 .recipe-grid {
