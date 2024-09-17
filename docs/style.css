@@ -27,6 +27,7 @@
   display: inline-block;
   margin: 4px 0;
   cursor: pointer;
+  font-family: Sansita One;
 }
 
 .navLink:hover{
@@ -51,6 +52,7 @@
   position: relative; 
   margin: 0 30px; 
   text-align: center; 
+  font-family: Sansita One;
 }
 
 .linkImage {
