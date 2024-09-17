@@ -41,6 +41,7 @@ src: url(fonte/SansitaOne.ttf);
 
 .navButton:hover{
     color: white;
+  font-family:Sansita One;
 }
 
 #imgLinks {
