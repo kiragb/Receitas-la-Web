@@ -48,8 +48,9 @@
 }
 
 .linkContainer {
-  margin: 0 30px; /* Espaçamento entre os elementos */
-  text-align: center; /* Centraliza o texto e a imagem dentro do container */
+  position: relative; 
+  margin: 0 30px; 
+  text-align: center; 
 }
 
 .linkImage {
@@ -58,17 +59,17 @@
   width: 200px;
   height: 200px;
   display: block;
-  margin: 0 auto; /* Centraliza a imagem dentro do container */
+  margin: 0 auto; 
   cursor: pointer;
 }
 
 .center {
-    position: absolute;
-    top: 50%; /* Move o texto 50% para baixo */
-    margin: 0 100px;
-    transform: translate(-50%, -50%); /* Centraliza o texto no meio da imagem */
-    font-weight: bold;
-    color: white; /* Opcional: muda a cor do texto para garantir contraste */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
 }
 
 .linkImage:hover{
