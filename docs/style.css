@@ -20,6 +20,7 @@ src: url(fonte/SansitaOne.ttf);
   margin: 4px 0;
   cursor: pointer;
   background-color: #fedce0;
+  font-family: Sansita One;
 }
 
 .navLink{
