@@ -60,6 +60,7 @@ src: url(fonte/SansitaOne.ttf);
   margin: 0 30px; 
   text-align: center; 
   font-family: Sansita One;
+  font-size:20px;
 }
 
 .linkImage {
