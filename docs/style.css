@@ -104,7 +104,8 @@ form{
   border: none; 
   padding: 10px; 
   flex: 1; 
-  background-color: white; 
+  background-color: white;
+  font-family: Sansita One;
 }
 
 .busca:focus {
