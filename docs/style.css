@@ -1,3 +1,8 @@
+@font-face {
+font-family: Sansita One;
+src: url(fonte/SansitaOne.ttf);
+}
+
 #navbar{
   position: fixed;
   right: 30px;
