@@ -12,6 +12,16 @@ font-family: Sansita One;
 src: url(fonte/SansitaOne.ttf);
 }
 
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-top: 10px;
+      font-size: 30px;
+      font-family: Sansita One;
+    }
+    
+
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
