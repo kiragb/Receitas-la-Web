@@ -1,57 +1,51 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title  img src="img/muffin.png" alt="fundo">
-        Receitas a lá web</title>
-        <link rel="shortcut icon" href="img/logo.png">
-
-      
-
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-</head>
-<body>
-    <form method="post">
-        <div class="search-box">
-        <input class="busca" placeholder="Buscar" type="text">
-        <i class="fas fa-search"></i>
-        </div>
-      </form>
-     <div id="navbar">
-      <a class="navLink">Tematicas</a>
-      <a class="navLink">Salgados</a>
-      <a class="navLink">Doces</a>
-      <a class="navLink">Drinks</a>
-      <a href="https://kiragb.github.io/Receitas-la-Web/login.html"><button class="navButton">Login</button></a>
-     </div>
-
-     <div id="logo">
-<img src="img/logo.png" class="imagemlogo">
-     </div>
-
-      <div id="imgLinks">
-          <div class="linkContainer">
-          <img src="https://i.pinimg.com/564x/da/bf/25/dabf259cf5500c37dc0241d9583d99c9.jpg" class="linkImage"/>
-          <div class="center">Salgados</div>
+<!Doctype html>
+<html>
+    <head>
+        <title>Receita à la Web</title>
+        <!-- CSS do NavBar-->
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!--CSS Receitas-->
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <form method="post" active="busca.php">
+          <div class="search-box">
+          <input class="busca" placeholder="Buscar" type="text">
+          <button class="search-button"><i class="fas fa-search"></i></button>
           </div>
-      <div class="linkContainer">
-          <img src="https://i.pinimg.com/564x/3b/26/5e/3b265e60f4eb5e5551e153612139fdc9.jpg" class="linkImage"/>
-          <div class="center">Doces</div>
+        </form>
+       <div id="navbar">
+        <a class="navLink">Tematicas</a>
+        <a class="navLink">Salgados</a>
+        <a class="navLink">Doces</a>
+        <a class="navLink">Drinks</a>
+        <button class="navButton">Login</button>
+       </div>
+       <div id="logo">
+        <img src="logo.png" class="logo">
+        </div>
+        <div id="imgLinks">
+            <div class="linkContainer">
+            <img src="https://i.pinimg.com/564x/da/bf/25/dabf259cf5500c37dc0241d9583d99c9.jpg" class="linkImage"/>
+            <div class="center">Salgados</div>
+            </div>
+        <div class="linkContainer">
+            <img src="https://i.pinimg.com/564x/3b/26/5e/3b265e60f4eb5e5551e153612139fdc9.jpg" class="linkImage"/>
+            <div class="center">Doces</div>
+        </div>
+        <div class="linkContainer">
+            <img src="https://i.pinimg.com/564x/b6/dd/7d/b6dd7d846d349d704bc1edfd3a00c043.jpg" class="linkImage"/>
+            <div class="center">Drinks</div>
+        </div>
+        <div class="linkContainer">
+            <img src="https://i.pinimg.com/564x/98/89/1e/98891ef30ab41fc49c30466c4e70f209.jpg" class="linkImage"/>
+            <div class="center">Tematicas</div>
+        </div>
       </div>
-      <div class="linkContainer">
-          <img src="https://i.pinimg.com/564x/b6/dd/7d/b6dd7d846d349d704bc1edfd3a00c043.jpg" class="linkImage"/>
-          <div class="center">Drinks</div>
-      </div>
-      <div class="linkContainer">
-          <img src="https://i.pinimg.com/564x/98/89/1e/98891ef30ab41fc49c30466c4e70f209.jpg" class="linkImage"/>
-          <div class="center">Tematicas</div>
-      </div>
-    </div>
-    
-    <section class="recipes">
+
+      <section class="recipes">
         <h2>ALGUMAS RECEITAS...</h2>
         <div class="recipe-grid">
             <div class="recipe-card">
@@ -179,5 +173,5 @@
             </div>
         </div>
     </section>
-</body>
+    </body>
 </html>
