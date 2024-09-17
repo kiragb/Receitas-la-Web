@@ -38,6 +38,7 @@ src: url(fonte/SansitaOne.ttf);
 .navLink:hover{
    background-color: #fedce0;
    color: white;
+   font-family: Sansita One;
 }
 
 .navButton:hover{
