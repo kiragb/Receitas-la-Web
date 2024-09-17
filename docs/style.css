@@ -38,38 +38,43 @@
     color: white;
 }
 
-#imgLinks{
-    display: flex;
-    justify-content: flex-start; /* Ajusta o alinhamento horizontal */
-    padding: 200px; 
+#imgLinks {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: auto; 
+  
+  padding-bottom: 150px
 }
 
 .linkContainer {
-    position: relative; /* Necessário para o posicionamento absoluto do texto */
-    margin: 0 10px; /* Espaço entre as imagens */
+  margin: 0 30px; /* Espaçamento entre os elementos */
+  text-align: center; /* Centraliza o texto e a imagem dentro do container */
 }
 
-.linkImage{
+.linkImage {
   opacity: 0.5;
   border-radius: 50%;
   width: 200px;
   height: 200px;
-  display: block; /* Remove o espaçamento em linha */
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem dentro do container */
   cursor: pointer;
+}
+
+.center {
+    position: absolute;
+    top: 50%; /* Move o texto 50% para baixo */
+    margin: 0 100px;
+    transform: translate(-50%, -50%); /* Centraliza o texto no meio da imagem */
+    font-weight: bold;
+    color: white; /* Opcional: muda a cor do texto para garantir contraste */
 }
 
 .linkImage:hover{
   filter: grayscale(50%);
 }
 
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: white;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
-}
 
 form{
   position: fixed;
@@ -77,28 +82,44 @@ form{
   left: 300px;
 }
 
-
-.search-btn{
-
-  color: white;
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #ed074c;
+.search-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-
+  border: 1px solid #ccc; 
+  border-radius: 16px; 
+  overflow: hidden; 
 }
 
+.search-box input.busca {
+  border: none; 
+  padding: 10px; 
+  flex: 1; 
+  background-color: white; 
+}
 
-.busca{
-  border-radius: 16px;
-  border:none;
-  padding: 10px 24px;
-  display: inline-block;
-  margin: 4px 0;
-  cursor: pointer;
+.busca:focus {
+    outline: none; /* Remove o contorno ao clicar */
+    border-color: gray; /* Mantém a borda cinza ao focar */
+  }
+
+.search-button{
+  border: none;
+  background-color: white;
+}
+
+.search-button i {
+  color: #fedce0;
+}
+
+#logo {
+  position:static;
+  margin: 0 auto; /* Centraliza a logo horizontalmente */
+  padding-top: 50px;
+  padding-bottom: 0;
+  width: 600px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 900px;
 }
