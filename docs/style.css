@@ -63,7 +63,7 @@ src: url(fonte/SansitaOne.ttf);
 }
 
 .linkImage {
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 50%;
   width: 200px;
   height: 200px;
