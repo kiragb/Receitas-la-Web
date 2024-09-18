@@ -20,6 +20,7 @@ src: url(fonte/SansitaOne.ttf);
   margin: 4px 0;
   cursor: pointer;
   background-color: #c38f65;
+  font-family: Sansita One;
 }
 
 .navLink{
@@ -32,6 +33,7 @@ src: url(fonte/SansitaOne.ttf);
   display: inline-block;
   margin: 4px 0;
   cursor: pointer;
+  font-family: Sansita One;
 }
 
 .navLink:hover{
@@ -56,6 +58,8 @@ src: url(fonte/SansitaOne.ttf);
   position: relative; 
   margin: 0 30px; 
   text-align: center; 
+  font-family: Sansita One;
+  font-size:30px;
 }
 
 .linkImage {
@@ -114,6 +118,8 @@ form {
   padding: 10px;
   flex: 1;
   background-color: white;
+  font-family: Sansita One;
+  font-style:italic;
 }
 
 .busca:focus {
