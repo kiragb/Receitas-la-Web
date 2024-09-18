@@ -144,12 +144,8 @@ form {
   text-align: center;
 }
 
-#logo img {
-  z-index: 0; /* O logo fica abaixo das imagens */
-}
 
 .logo {
-  width: 100%;
   max-width: 900px;
 }
 
