@@ -2,6 +2,7 @@
 font-family: Sansita One;
 src: url(fonte/SansitaOne.ttf);
 }
+
 #navbar{
   position: fixed;
   right: 30px;
@@ -18,8 +19,7 @@ src: url(fonte/SansitaOne.ttf);
   display: inline-block;
   margin: 4px 0;
   cursor: pointer;
-  background-color: #fedce0;
- font-family: Sansita One;
+  background-color: #c38f65;
 }
 
 .navLink{
@@ -32,17 +32,15 @@ src: url(fonte/SansitaOne.ttf);
   display: inline-block;
   margin: 4px 0;
   cursor: pointer;
-  font-family: Sansita One;
 }
 
 .navLink:hover{
-   background-color: #fedce0;
+   background-color: #c38f65;
    color: white;
 }
 
 .navButton:hover{
     color: white;
-  font-family:Sansita One;
 }
 
 #imgLinks {
@@ -58,12 +56,10 @@ src: url(fonte/SansitaOne.ttf);
   position: relative; 
   margin: 0 30px; 
   text-align: center; 
-  font-family:Sansita One;
-  font-size:30px;
 }
 
 .linkImage {
-  opacity: 0.8;
+  opacity: 0.5;
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -118,8 +114,6 @@ form {
   padding: 10px;
   flex: 1;
   background-color: white;
-  font-family:Sansita One;
-  font-style:italic;
 }
 
 .busca:focus {
@@ -133,16 +127,19 @@ form {
 }
 
 .search-button i {
-  color: #fedce0;
+  color: #c38f65;
 }
 
 #logo {
   position:static;
   margin: 0 auto; /* Centraliza a logo horizontalmente */
-  padding-top: 50px;
-  padding-bottom: 0;
-  width: 600px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
+}
+
+#logo img {
+  z-index: 0; /* O logo fica abaixo das imagens */
 }
 
 .logo {
