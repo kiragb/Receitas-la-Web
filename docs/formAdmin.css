@@ -71,6 +71,7 @@ textarea {
     padding: 10px 15px;
     font-size: 18px;
     cursor: pointer;
+    font-family: Sansita One;
     transition: background-color 0.3s;
 }
 
