@@ -118,6 +118,7 @@ form {
   padding: 10px;
   flex: 1;
   background-color: white;
+  font-family:Sansita One;
 }
 
 .busca:focus {
