@@ -8,27 +8,26 @@
     <h1>Formulario de Postagem de Receitas</h1>
     <p>Os campos marcados em * indicam campos obrigatórios</p>
     <form method="post">
-        <label for="capaReceita">Imagem de Capa: </label>
+        <label for="capaReceita">*Imagem de Capa: </label>
         <input type="image" required><br>
 
-        <label for="nomeReceita">Prato: </label>
+        <label for="nomeReceita">*Prato: </label>
         <input class="placeholder" id="nomeReceita" type="text" placeholder="Nome do prato" required><br>
 
-        <label for="ingredienteReceita">Ingredientes: </label>
-         <label for="ingredienteReceita">Ingredientes: </label>
+        <label for="ingredienteReceita">*Ingredientes: </label>
         <textarea class="placeholder" id="etapasReceita" placeholder="Descreva em lista todos os ingedientes necessários" rows="4" required></textarea><br>
 
-        <label for="etapasReceita">Passo à Passo: </label>
+        <label for="etapasReceita">*Passo à Passo: </label>
         <textarea class="placeholder" id="etapasReceita" placeholder="Descreva o passo a passo para preparar o prato" rows="4" required></textarea><br>
 
-        <label for="tipoReceita">Tipo de prato: </label>
+        <label for="tipoReceita">*Tipo de prato: </label>
         <select name="tipoReceita" id="tipoReceita">
             <option value="Salgado">Salgado</option>
             <option value="Doce">Doce</option>
             <option value="Drink">Drink</option>
         </select>
 
-        <label>Esta é uma receita temática?</label>
+        <label>*Esta é uma receita temática?</label>
 <div class="checkbox-container">
   <label><input class="checkbox" type="checkbox"> Sim</label>
   <label><input class="checkbox" type="checkbox"> Não</label>
