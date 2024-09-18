@@ -2,7 +2,6 @@
 font-family: Sansita One;
 src: url(fonte/SansitaOne.ttf);
 }
-
 #navbar{
   position: fixed;
   right: 30px;
@@ -50,8 +49,7 @@ src: url(fonte/SansitaOne.ttf);
   justify-content: center; 
   align-items: center; 
   height: auto; 
-  
-  padding-bottom: 150px
+  padding-bottom: 90px
 }
 
 .linkContainer {
@@ -59,7 +57,7 @@ src: url(fonte/SansitaOne.ttf);
   margin: 0 30px; 
   text-align: center; 
   font-family: Sansita One;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .linkImage {
@@ -119,7 +117,6 @@ form {
   flex: 1;
   background-color: white;
   font-family: Sansita One;
-  font-style:italic;
 }
 
 .busca:focus {
@@ -144,4 +141,7 @@ form {
   text-align: center;
 }
 
+#logo img {
+  z-index: 0; /* O logo fica abaixo das imagens */
+}
 
