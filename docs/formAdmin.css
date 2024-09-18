@@ -42,7 +42,7 @@ form {
 label {
     display: block;
     margin: 10px 0 5px;
-    font-style: bold;
+    font-weight:bolder;
     font-family: Times New Roman;
     font-size: 18px;
 }
