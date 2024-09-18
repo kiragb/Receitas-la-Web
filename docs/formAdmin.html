@@ -1,43 +1,42 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Receita à la Web</title>
-            <link rel="stylesheet" href="formAdmin.css">
-    </head>
-    <body>
-      <h1> Formulario de postagem de Receitas</h1>
-      <p>Os campos marcados em * indicam campos obrigatorios</p>
-        <form method="post">
-            <label id="capaReceita">Imagem de Capa: </label>
-            <input type="image" required><br>
+<head>
+    <title>Receita à la Web</title>
+    <link rel="stylesheet" href="formAdmin.css">
+</head>
+<body>
+    <h1>Formulario de Postagem de Receitas</h1>
+    <p>Os campos marcados em * indicam campos obrigatórios</p>
+    <form method="post">
+        <label for="capaReceita">Imagem de Capa: </label>
+        <input type="image" required><br>
 
-            <label id="nomeReceita">Prato: </label>
-            <input id="nomeReceita" type="text" placeholder="Nome do prato" required><br>
+        <label for="nomeReceita">Prato: </label>
+        <input id="nomeReceita" type="text" placeholder="Nome do prato" required><br>
 
-            <label id="ingredienteReceita">Ingredientes: </label>
-            <input id="ingredienteReceita" type="text" placeholder="Escreva enm lista todos os ingredientes necessários" required><br>
+        <label for="ingredienteReceita">Ingredientes: </label>
+        <input id="ingredienteReceita" type="text" placeholder="Escreva em lista todos os ingredientes necessários" required><br>
 
-            <label>Passo à Passo: </label>
-            <textarea id="etapasReceita" type="text" placeholder="Descreva o passo á passo para prepara o prato" rows="4" cols="50" required>
-                Etapa 1:
-                 - 
-                 -
-                 -
-                Etapa 2: 
-            </textarea><br>
-                
-            <label id="tipoReceita">Tipo de prato: </label>
-            <select name="tipoReceita" id="tipoReceita" >
-                <option value="Salgado">Salgado</option>
-                <option value="Doce">Doce</option>
-                <option value="Drink">Drink</option>
-            </select>
-            <label>Esta é uma receita Tematica?</label>
-            <input type="checkbox"><br>
-            <button class="btn-principal" type="submit">Enviar </button>
-            <button class="btn-principal" type="reset">Limpar </button>
+        <label for="etapasReceita">Passo à Passo: </label>
+        <textarea id="etapasReceita" placeholder="Descreva o passo a passo para preparar o prato" rows="4" required></textarea><br>
 
-        </form>
-        
-    </body>
+        <label for="tipoReceita">Tipo de prato: </label>
+        <select name="tipoReceita" id="tipoReceita">
+            <option value="Salgado">Salgado</option>
+            <option value="Doce">Doce</option>
+            <option value="Drink">Drink</option>
+        </select>
+
+        <label>Esta é uma receita temática?</label>
+<div class="checkbox-container">
+  <label><input class="checkbox" type="checkbox"> Sim</label>
+  <label><input class="checkbox" type="checkbox"> Não</label>
+</div>
+
+<div style="text-align: center;">
+<button class="btn-principal" type="submit">Enviar</button>
+        <button class="btn-principal" type="reset">Limpar</button>
+</div>
+    </form>
+</body>
 </html>
