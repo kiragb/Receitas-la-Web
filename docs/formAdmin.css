@@ -27,7 +27,7 @@ p {
     font-size: 30px;
 }
 .placeholder{
-font-family: Sansita One;
+font-family: Times New Roman;
 font-style: italic;
 }
 form {
@@ -42,7 +42,7 @@ form {
 label {
     display: block;
     margin: 10px 0 5px;
-    font-family: Sansita One;
+font-family: Times New Roman;
     font-size: 18px;
 }
 
@@ -71,7 +71,7 @@ textarea {
     padding: 10px 15px;
     font-size: 18px;
     cursor: pointer;
-    font-family: Sansita One;
+font-family: Times New Roman;
     transition: background-color 0.3s;
 }
 
