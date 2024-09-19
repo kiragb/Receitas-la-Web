@@ -1,15 +1,44 @@
-/* formAdmin.css */
 @font-face {
-font-family: Sansita One;
-src: url(fonte/SansitaOne.ttf);
+    font-family: Sansita One;
+    src: url(fonte/SansitaOne.ttf);
 }
 
 body {
-    font-family: Sansita One;
-    background-color: #f9f9f9;
+    background-color: #e5ddd6;
     margin: 0;
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    display: flex; /* Para centralizar o container */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.outer-container {
+    width: 90%; /* Largura do container externo */
+    max-width: 1200px; /* Largura máxima */
+    border-radius: 20px;
+}
+
+.container {
+    display: flex; /* Usar display flex para criar colunas */
+    height: 100%; /* Defina uma altura fixa para o container */
+     border-radius: 16px;
+}
+
+.imagem-container {
+    flex: 1; /* Ocupa uma fração do espaço */
+    background-image: url(https://i.pinimg.com/564x/49/39/c7/4939c7edf54ffbab08149dfdfe9b181a.jpg);
+    background-size: cover; /* Cobrir toda a área */
+    background-repeat: no-repeat; /* Não repetir a imagem */
+    border-radius: 20px 0px 0px 20px;
+}
+
+form {
+    flex: 1; /* Ocupa a mesma fração do espaço que a imagem */
+    background: white;
     padding: 20px;
-    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 20px 20px 0;
 }
 
 h1 {
@@ -25,26 +54,21 @@ p {
     margin-bottom: 20px;
     font-family: Sansita One;
     font-size: 30px;
+    color: #000;
+    font-weight: bold;
 }
-.placeholder{
-font-family: Times New Roman;
-font-style: italic;
-}
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+.placeholder {
+    font-family: Times New Roman;
+    font-style: italic;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
-    font-weight:bolder;
-    font-family: Times New Roman;
-    font-size: 18px;
+    font-weight: bolder;
+ font-family: sans-serif;
+     font-size: 18px;
 }
 
 input[type="text"], 
@@ -57,13 +81,12 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    font-family: Times New Roman;
+    font-family: sans-serif;
 }
 
 textarea {
     resize: vertical; /* Permite redimensionar verticalmente */
 }
-
 
 .btn-principal {
     background-color: #c38f65;
@@ -73,23 +96,21 @@ textarea {
     padding: 10px 15px;
     font-size: 18px;
     cursor: pointer;
-font-family: Times New Roman;
+    font-family: sans-serif;
     transition: background-color 0.3s;
 }
 
 .btn-principal:hover {
-    align-items: center;
-    justify-content:center ;
     background-color: #b37258; /* Cor mais escura ao passar o mouse */
 }
+
 .checkbox-container {
-  display: flex;
-  align-items: center;
-  padding-top:0,5%;
- padding-bottom:5%;
+    display: flex;
+    align-items: center;
+    padding-top: 0.5%;
+    padding-bottom: 5%;
 }
 
 .checkbox {
-  /* Estilos para os checkboxes */
-  margin-right: 10px; /* Espaçamento entre os checkboxes */
+    margin-right: 10px; /* Espaçamento entre os checkboxes */
 }
