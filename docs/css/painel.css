@@ -1,0 +1,39 @@
+body {
+  background-color: #EFEAF7;
+  height: 100vh;
+  align-content: center;
+}
+
+div.painel {
+  background-color: #FEFEFF;
+  display: flex;
+  width: 900px;
+  margin: auto;
+  border-radius: 16px;
+}
+
+div.painel > img {
+  width: 50%;
+  border-radius: 0 16px 16px 0;
+}
+
+div.painel-formulario {
+  text-align: center;
+  padding: 24px;
+}
+
+div.painel-formulario,
+div.painel-formulario > form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+div.painel-formulario > hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(69, 42, 117, 0.2509803922);
+  border: none;
+}
+
+/*# sourceMappingURL=painel.css.map */
