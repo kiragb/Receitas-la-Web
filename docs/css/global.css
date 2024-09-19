@@ -71,8 +71,8 @@ input.input {
 }
 
 button.btn-principal {
-  background-color: #D2C6E6;
-  color: #3E3E3E;
+  background-color: #c38f65;
+  color: #f7f7f7;
   padding: 7px 8px;
   border-radius: 16px;
   border: none;
@@ -82,11 +82,11 @@ button.btn-principal {
 }
 
 button.btn-principal:hover {
-  background-color: #B9A6D8;
+  background-color: #9a6a44;
 }
 
 a.link-principal {
-  color: #452A75;
+  color: #c38f65;
   text-decoration: none;
 }
 

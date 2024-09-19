@@ -48,6 +48,11 @@ table {
 }
 
 /* CSS principal */
+$cor-botao-principal: #c38f65;
+$cor-botao-principal-hover: #9a6a44;
+$cor-texto-botao-principal: #f7f7f7; 
+$cor-link-principal: #c38f65;
+
 body {
     font-family: sans-serif;
 }
@@ -66,8 +71,8 @@ input.input {
 }
 
 button.btn-principal {
-    background-color: #D2C6E6;
-    color: #3E3E3E;
+    background-color: $cor-botao-principal;
+    color: $cor-texto-botao-principal;
     padding: 7px 8px;
     border-radius: 16px;
     border: none;
@@ -77,11 +82,11 @@ button.btn-principal {
 }
 
 button.btn-principal:hover {
-    background-color: #B9A6D8;
+    background-color: $cor-botao-principal-hover;
 }
 
 a.link-principal {
-    color: #452A75;
+    color: $cor-link-principal;
     text-decoration: none;
 }
 
