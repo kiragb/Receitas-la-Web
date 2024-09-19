@@ -20,6 +20,8 @@ div.painel > img {
 div.painel-formulario {
   text-align: center;
   padding: 24px;
+  justify-content: center;
+  width: 50%;
 }
 
 div.painel-formulario,

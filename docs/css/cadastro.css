@@ -4,11 +4,6 @@ div.painel > img {
   object-fit: cover;
 }
 
-div.painel-formulario {
-  justify-content: center;
-  width: 50%;
-}
-
 div.linha {
   display: flex;
   justify-content: space-between;
