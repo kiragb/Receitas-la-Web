@@ -9,8 +9,17 @@ div.linha {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    flex-direction: column;
+    width: 100%;
 }
 
-div.linha > input {
-    width: 50%;
+@media (min-width: 1024px) {
+    div.linha{
+        width: auto;
+        flex-direction: row;
+    }
+
+    div.linha > input {
+        width: 50%;
+    }
 }
