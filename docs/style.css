@@ -141,3 +141,10 @@ form {
   z-index: 0; /* O logo fica abaixo das imagens */
 }
 
+.copyright{
+   color: #999999;
+   text-align: center !important;
+   font-size: 80%;
+    font-weight: 400;
+}
+
