@@ -1,7 +1,3 @@
-@font-face {
-font-family: Sansita One;
-src: url(fonte/SansitaOne.ttf);
-}
 #navbar{
   position: fixed;
   right: 30px;
@@ -19,7 +15,7 @@ src: url(fonte/SansitaOne.ttf);
   margin: 4px 0;
   cursor: pointer;
   background-color: #c38f65;
-  font-family: Sansita One;
+  font-family: "Caveat Brush", cursive;
 }
 
 .navLink{
@@ -32,7 +28,7 @@ src: url(fonte/SansitaOne.ttf);
   display: inline-block;
   margin: 4px 0;
   cursor: pointer;
-  font-family: Sansita One;
+  font-family: "Caveat Brush", cursive;
 }
 
 .navLink:hover{
@@ -116,7 +112,7 @@ form {
   padding: 10px;
   flex: 1;
   background-color: white;
-  font-family: Sansita One;
+  font-family: "Caveat Brush", cursive;
 }
 
 .busca:focus {
