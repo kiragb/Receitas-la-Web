@@ -11,10 +11,9 @@
         <div class="container">
             <div class="imagem-container"></div>
             
-            <form>
+            <form method="POST" active="postarReceita.php">
                 <h1>Formulário de Postagens de Receitas</h1>
                 <p>Todos os Campos São Obrigatórios</p>
-
                 <label for="capaReceita">Imagem de Capa:</label>
                 <input type="image" required><br>
 
@@ -36,10 +35,9 @@
 
                 <label  style="text-align: center;" >Esta é uma receita temática?</label>
                 <div class="checkbox-wrapper-10">
-  <input class="tgl tgl-flip" id="cb5" type="checkbox" checked />
-  <label class="tgl-btn" data-tg-off="Não" data-tg-on="Sim" for="cb5"></label>
-</div>
-
+                <input class="tgl tgl-flip" id="cb5" type="checkbox" checked />
+                <label class="tgl-btn" data-tg-off="Não" data-tg-on="Sim" for="cb5"></label>
+                </div>
                 <div style="text-align: center;">
                     <button class="btn-principal" type="submit">Enviar</button>
                     <button class="btn-principal" type="reset">Limpar</button>
