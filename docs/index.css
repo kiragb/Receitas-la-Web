@@ -17,7 +17,7 @@ text-align: center;
 margin-bottom: 20px;
 padding-top: 10px;
 font-size: 30px;
-font-family: Sansita One;
+font-family: "Caveat Brush", cursive;
 }
     
 
@@ -65,7 +65,7 @@ font-family: Sansita One;
 .recipe-card p {
   font-size: 25px;
   color: #ffffff;
-  font-family: Sansita One;
+  font-family: "Caveat Brush", cursive;
   margin-top: 10px;
   margin-bottom: 100px; /* Remove o espaço extra abaixo do texto */
   /* Alinha o texto ao topo do card, logo abaixo da imagem */
