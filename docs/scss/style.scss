@@ -1,0 +1,169 @@
+#navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.navButton {
+  text-decoration: none;
+  border: none;
+  border-radius: 16px;
+  color: black;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 0;
+  cursor: pointer;
+  background-color: #c38f65;
+  font-family: "Caveat Brush", cursive;
+}
+
+.navLink {
+  text-decoration: none;
+  border: none;
+  border-radius: 16px;
+  color: black;
+  padding: 10px 24px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.navLink:hover {
+  background-color: #c38f65;
+  color: white;
+}
+
+.navButton:hover {
+  color: white;
+}
+
+#imgLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.linkContainer {
+  position: relative;
+  margin: 0 30px;
+  text-align: center;
+  font-family: "Caveat Brush", cursive;
+  font-size: 30px;
+}
+
+.linkImage {
+  opacity: 0.8;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+}
+
+.linkImage:hover {
+  filter: grayscale(50%);
+}
+
+#cabecalho {
+  background-color: white;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Estilos para o formulário de busca */
+#cabecalho>form {
+  display: flex;
+  justify-content: flex-start; /* Alinha à esquerda */
+  flex-grow: 1; /* Faz o formulário crescer conforme necessário */
+  max-width: 500px; /* Define um tamanho máximo para o formulário */
+  margin: auto;
+}
+
+.search-box {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%; /* Faz o input ocupar 100% do espaço disponível */
+}
+
+.search-box input.busca {
+  border: none;
+  padding: 10px;
+  flex: 1;
+  background-color: white;
+  font-family: "Caveat Brush", cursive;
+}
+
+.busca:focus {
+  outline: none; /* Remove o contorno ao focar */
+}
+
+.search-button {
+  border: none;
+  background-color: white;
+  padding: 10px;
+}
+
+.search-button i {
+  color: #c38f65;
+}
+
+#logo {
+  position: static;
+  margin: 0 auto; /* Centraliza a logo horizontalmente */
+  padding: 16px;
+  text-align: center;
+}
+
+#logo img {
+  z-index: 0; /* O logo fica abaixo das imagens */
+  width: 100%;
+  max-width: 280px;
+}
+
+.copyright {
+  color: #999999;
+  text-align: center !important;
+  font-size: 80%;
+  font-weight: 400;
+  padding: 16px;
+}
+
+@media (min-width: 1280px) {
+  #cabecalho {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    padding: 16px 0;
+  }
+
+  #cabecalho>form,
+
+  #cabecalho>#navbar {
+    margin: 0 20px;
+  }
+
+  #logo {
+    margin-top: 96px;
+  }
+}

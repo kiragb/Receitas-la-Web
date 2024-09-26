@@ -1,186 +1,186 @@
 <!Doctype html>
-<html>
-    <head>
-        <title>Receita à la Web</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS do NavBar-->
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <!--CSS Receitas-->
-        <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-         <!--Font Family-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-    </head>
-    <body>
-         <div id="cabecalho">
-        <form method="post" active="busca.php">
-          <div class="search-box">
-          <input class="busca" placeholder="Buscar..." type="text">
-          <button class="search-button"><i class="fas fa-search"></i></button>
-          </div>
-        </form>
-       <div id="navbar">
-        <a class="navLink">Tematicas</a>
-        <a class="navLink">Salgados</a>
-        <a class="navLink">Doces</a>
-        <a class="navLink">Drinks</a>
-        <a href="login.html"><button class="navButton">Login</button></a>
+<html lang="pt-br">
+
+<head>
+  <title>Receita à la Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/global.css">
+  <!-- CSS do NavBar-->
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!--CSS Receitas-->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!--Font Family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="cabecalho">
+    <form method="post" action="busca.php">
+      <div class="search-box">
+        <input class="busca" placeholder="Buscar..." type="text">
+        <button class="search-button"><i class="fas fa-search"></i></button>
       </div>
-       </div>
-       <div id="logo">
-        <img src="img/logo.png">
-        </div>
-        <div id="imgLinks">
-            <div class="linkContainer">
-            <img src="https://i.pinimg.com/564x/da/bf/25/dabf259cf5500c37dc0241d9583d99c9.jpg" class="linkImage"/>
-            <div class="center">Salgados</div>
-            </div>
-        <div class="linkContainer">
-            <img src="https://i.pinimg.com/564x/9e/fb/45/9efb452c5faffbc0616c3dd446faf4a6.jpg" class="linkImage"/>
-            <div class="center">Doces</div>
-        </div>
-        <div class="linkContainer">
-            <img src="https://i.pinimg.com/564x/20/af/78/20af78383ea45e84a5b11f30ccd2ada4.jpg" class="linkImage"/>
-            <div class="center">Drinks</div>
-        </div>
-        <div class="linkContainer">
-            <img src="https://i.pinimg.com/564x/ce/97/0b/ce970b53d055fe0e5ba2a50f727ae05c.jpg" class="linkImage"/>
-            <div class="center">Tematicas</div>
-        </div>
-      </div>
-      <section class="recipes">
-        <h2>ALGUMAS RECEITAS...</h2>
-        <div class="recipe-grid">
-            <div class="recipe-card">
-                <img src="img/muffin.png"   alt="Muffin">
-                <p>Muffin</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="img/brownie.jpeg" alt="Brownies">
-                <p>Brownie</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="img/tiramisu.jpeg" alt="Tiramisu">
-                <p>Tiramisu</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-        </div>
-    </section >
-            <section class="baixo">
-            <div class="recipe-card">
-                <img src="img/ratatoulle.jpeg" alt="Ratatouille">
-                <p>Ratatouille</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="img/lasanha.jpeg" alt="Lasagna">
-                <p>Lasagna</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="img/limao.jpeg" alt="Lime Pie">
-                <p>Lime Pie</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="themed-recipes">
-        <h2>ALGUMAS RECEITAS TEMÁTICAS...</h2>
-        <div class="recipe-grid">
-            <div class="recipe-card">
-                <img src="img/gem.jpg" alt="Boneco de Gengibre">
-                <p>Boneco de Gengibre</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="img/donuts.jpeg" alt="A dama e o Vagabundo">
-                <p>Macarronada</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card" >
-                <img src="img/dama.jpeg" alt="Donuts dos Sipisons">
-
-                <p>Donuts dos Simpisons</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="themed-recipes">
-        <div class="recipe-grid">
-            <div class="recipe-card">
-                <img src="img/gem.jpg" alt="Boneco de Gengibre">
-                <p>Boneco de Gengibre</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card">
-                <img src="img/donuts.jpeg" alt="A dama e o Vagabundo">
-                <p>Macarronada</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-            <div class="recipe-card" >
-                <img src="img/dama.jpeg" alt="Donuts dos Sipisons">
-
-                <p>Donuts dos Simpisons</p>
-                <div class="icons">
-                    <span><i class="fas fa-clock"></i> 30 min</span>
-                    <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                    <span><i class="fas fa-comment"></i> 100 </span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="copyright">
-        <p class="mb-0"><small>&copy;Letícia Novaes, Natalia Dias Fernandes, Walquiria Gonçalves Brabosa</small></p>
+    </form>
+    <div id="navbar">
+      <a class="navLink">Tematicas</a>
+      <a class="navLink">Salgados</a>
+      <a class="navLink">Doces</a>
+      <a class="navLink">Drinks</a>
+      <a class="navButton" href="login.html">Login</a>
     </div>
-    </body>
+  </div>
+  <div id="logo">
+    <img src="img/logo-cropped.png" alt="logo">
+  </div>
+  <div id="imgLinks">
+    <div class="linkContainer">
+      <img src="https://i.pinimg.com/564x/da/bf/25/dabf259cf5500c37dc0241d9583d99c9.jpg" class="linkImage"
+        alt="imagem receita">
+      <div class="center">Salgados</div>
+    </div>
+    <div class="linkContainer">
+      <img src="https://i.pinimg.com/564x/9e/fb/45/9efb452c5faffbc0616c3dd446faf4a6.jpg" class="linkImage"
+        alt="imagem receita">
+      <div class="center">Doces</div>
+    </div>
+    <div class="linkContainer">
+      <img src="https://i.pinimg.com/564x/20/af/78/20af78383ea45e84a5b11f30ccd2ada4.jpg" class="linkImage"
+        alt="imagem receita">
+      <div class="center">Drinks</div>
+    </div>
+    <div class="linkContainer">
+      <img src="https://i.pinimg.com/564x/ce/97/0b/ce970b53d055fe0e5ba2a50f727ae05c.jpg" class="linkImage"
+        alt="imagem receita">
+      <div class="center">Tematicas</div>
+    </div>
+  </div>
+  <h2>ALGUMAS RECEITAS...</h2>
+  <div class="recipes">
+    <div class="recipe-card">
+      <img src="img/muffin.png" alt="Muffin">
+      <p>Muffin</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/brownie.jpeg" alt="Brownies">
+      <p>Brownie</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/tiramisu.jpeg" alt="Tiramisu">
+      <p>Tiramisu</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="img/ratatoulle.jpeg" alt="Ratatouille">
+      <p>Ratatouille</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/lasanha.jpeg" alt="Lasagna">
+      <p>Lasagna</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/limao.jpeg" alt="Lime Pie">
+      <p>Lime Pie</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+  </div>
+
+  <h2>ALGUMAS RECEITAS TEMÁTICAS...</h2>
+  <div class="recipes">
+    <div class="recipe-card">
+      <img src="img/gem.jpg" alt="Boneco de Gengibre">
+      <p>Boneco de Gengibre</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/donuts.jpeg" alt="A dama e o Vagabundo">
+      <p>Macarronada</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/dama.jpeg" alt="Donuts dos Sipisons">
+
+      <p>Donuts dos Simpisons</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="img/gem.jpg" alt="Boneco de Gengibre">
+      <p>Boneco de Gengibre</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/donuts.jpeg" alt="A dama e o Vagabundo">
+      <p>Macarronada</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+    <div class="recipe-card">
+      <img src="img/dama.jpeg" alt="Donuts dos Sipisons">
+
+      <p>Donuts dos Simpisons</p>
+      <div class="icons">
+        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-heart"></i> 4,4 mil</span>
+        <span><i class="fas fa-comment"></i> 100 </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p><small>&copy;Letícia Novaes, Natalia Dias Fernandes, Walquiria Gonçalves Brabosa</small></p>
+  </div>
+</body>
+
 </html>

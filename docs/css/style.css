@@ -1,10 +1,14 @@
-#navbar{
-  position: fixed;
-  right: 30px;
-  padding: 10px;
+@charset "UTF-8";
+#navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px 0;
 }
 
-.navButton{
+.navButton {
   text-decoration: none;
   border: none;
   border-radius: 16px;
@@ -18,7 +22,7 @@
   font-family: "Caveat Brush", cursive;
 }
 
-.navLink{
+.navLink {
   text-decoration: none;
   border: none;
   border-radius: 16px;
@@ -30,27 +34,26 @@
   cursor: pointer;
 }
 
-.navLink:hover{
-   background-color: #c38f65;
-   color: white;
+.navLink:hover {
+  background-color: #c38f65;
+  color: white;
 }
 
-.navButton:hover{
-    color: white;
+.navButton:hover {
+  color: white;
 }
 
 #imgLinks {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: auto; 
-  padding-bottom: 90px
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
 }
 
 .linkContainer {
-  position: relative; 
-  margin: 0 30px; 
-  text-align: center; 
+  position: relative;
+  margin: 0 30px;
+  text-align: center;
   font-family: "Caveat Brush", cursive;
   font-size: 30px;
 }
@@ -61,7 +64,7 @@
   width: 200px;
   height: 200px;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -74,28 +77,26 @@
   color: white;
 }
 
-.linkImage:hover{
+.linkImage:hover {
   filter: grayscale(50%);
 }
 
 #cabecalho {
-  background-color: white; 
-  width: 100%; 
-  padding: 20px; 
-  display: flex;
-  justify-content: space-between; 
+  background-color: white;
+  padding: 16px;
+  justify-content: space-between;
   align-items: center;
-  position: fixed;
   top: 0;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 /* Estilos para o formulário de busca */
-form {
+#cabecalho > form {
   display: flex;
   justify-content: flex-start; /* Alinha à esquerda */
   flex-grow: 1; /* Faz o formulário crescer conforme necessário */
   max-width: 500px; /* Define um tamanho máximo para o formulário */
+  margin: auto;
 }
 
 .search-box {
@@ -129,21 +130,40 @@ form {
 }
 
 #logo {
-  position:static;
+  position: static;
   margin: 0 auto; /* Centraliza a logo horizontalmente */
-  padding-top: 100px;
-  padding-bottom: 50px;
+  padding: 16px;
   text-align: center;
 }
 
 #logo img {
   z-index: 0; /* O logo fica abaixo das imagens */
+  width: 100%;
+  max-width: 280px;
 }
 
-.copyright{
-   color: #999999;
-   text-align: center !important;
-   font-size: 80%;
-    font-weight: 400;
+.copyright {
+  color: #999999;
+  text-align: center !important;
+  font-size: 80%;
+  font-weight: 400;
+  padding: 16px;
 }
 
+@media (min-width: 1280px) {
+  #cabecalho {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    padding: 16px 0;
+  }
+  #cabecalho > form,
+  #cabecalho > #navbar {
+    margin: 0 20px;
+  }
+  #logo {
+    margin-top: 96px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
