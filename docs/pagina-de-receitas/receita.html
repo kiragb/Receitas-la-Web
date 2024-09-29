@@ -6,51 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acessar receitas à la web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/global.css"
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen">
+    <link rel="stylesheet" href="../css/receita.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div id="cabecalho">
+        <form method="post" action="busca.php">
+            <div class="search-box">
+                <input class="busca" placeholder="Buscar..." type="text">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+        <div id="navbar">
+            <a class="navLink">Tematicas</a>
+            <a class="navLink">Salgados</a>
+            <a class="navLink">Doces</a>
+            <a class="navLink">Drinks</a>
+            <a class="navButton" href="login.html">Login</a>
+        </div>
+    </div>
     <div class="pagina-de-receita">
-        <img src="../img/brownie-receita.jpeg" alt="imagem de um brownie">
+        <img src="../img/cupcake-de-chocolate.jpg" alt="imagem de um brownie">
 
-        <div class="pagina-receita">
-            <h1>Brownie</h1>
-            <div class="icons">
-                <span><i class="fas fa-clock"></i> 30 min</span>
-                <span><i class="fas fa-heart"></i> 4,4 mil</span>
-                <span><i class="fas fa-comment"></i> 100 </span>
+        <main>
+            <div class="ingredientes">
+                <div class="titulo">
+
+                    <h1>Cupcake de Chocolate</h1>
+                    <div class="icons">
+                        <span><i class="fas fa-clock"></i> 20 min</span>
+                        <span><i class="fas fa-heart"></i> 10,4 mil</span>
+                        <span><i class="fas fa-comment"></i> 500 </span>
+                    </div>
+                </div>
+
+                <div class="painel">
+                    <h2> Ingredientes (10 porções)</h2>
+                    <ul>
+                        <li>3 ovos</li>
+                        <li>leite</li>
+                        <li>1 xícara (chá) de leite</li>
+                        <li>açúcar</li>
+                        <li>2 xícaras (chá) de açúcar</li>
+                        <li>farinha de trigo</li>
+                        <li>2 xícaras (chá) de farinha de trigo</li>
+                        <li>fermento em pó químico</li>
+                        <li>1 colher (sopa) de fermento em pó</li>
+                        <li>manteiga sem sal</li>
+                        <li>1/2 xícara (chá) de manteiga sem sal</li>
+                        <li>chocolate em pó</li>
+                        <li>4 colheres (sopa) de chocolate em pó</li>
+                    </ul>
+                </div>
+
             </div>
 
-            <h2> Ingredientes (10 porções)</h2>
-            <ul>
-                <li>250g de chocolate meio amargo</li>
-                <li>250g de manteiga</li>
-                <li>200g de açucar </li>
-                <li>100g de farinha de trigo</li>
-                <li>1/2 colher(café) de sal </li>
-                <li>4 ovos</li>
+            <div class="modo-de-preparo">
 
+                <div class="painel">
+                    <h2>Modo de preparo</h2>
+                    <h3>Etapa 1</h3>
+                    <p>Acenda o forno, enquanto separa as forminhas de papel e as posiciona na assadeira.</p>
 
-            </ul>
+                    <h3>Etapa 2</h3>
+                    <p>Peneire, em uma tigela grande, o chocolate em pó, a farinha e o fermento.</p>
 
-            <h2>Modo de preparo</h2>
-            <h3>Etapa 1 </h3>
-            <p>Misture o acucar, o sal e a farinha </p>
+                    <h3>Etapa 3</h3>
+                    <p>Separe cuidadosamente as gemas das claras e coloque-as em tigelas separadas.</p>
 
-            <h3>Etapa 2 </h3>
-            <p>Derrata o chocolate e a manteiga em banho maria </p>
+                    <h3>Etapa 4</h3>
+                    <p>Bata a manteiga e o açúcar na batedeira.</p>
 
-            <h3>Etapa 3 </h3>
-            <p>Incorpore o ovo ao choclate derretido, é importante adicionar um por vez</p>
+                    <h3>Etapa 5</h3>
+                    <p>Quando estiver formado um creme homogêneo e macio, acrescente as gemas uma a uma e bata mais.</p>
 
-            <h3>Etapa 4</h3>
-            <p>Misture os ingredientes secos à mistura</p>
+                    <h3>Etapa 6</h3>
+                    <p>Em seguida, adicione os ingredientes peneirados e o leite.</p>
 
-            <h3>Etapa 5</h3>
-            <p>Coloque em uma fôrma untada (20 x 28 cm) e asse em forno médio 170ºC até estar firme, aproximadamente 35
-                minutos. Um truque é apertar o topo do bolo com o indicador e, se ele voltar ao formato original,
-                significa que está pronto.</p>
-        </div>
+                    <h3>Etapa 7</h3>
+                    <p>Bata as claras em neve na batedeira ou com um batedor manual.</p>
+
+                    <h3>Etapa 8</h3>
+                    <p>Coloque a massa nas forminhas e leve para assar.</p>
+
+                    <h3>Etapa 9</h3>
+                    <p>Deixe no forno por, aproximadamente, 20 minutos.</p>
+
+                    <h3>Etapa 10</h3>
+                    <p>Faça o teste do palito e, se os cupcakes estiverem prontos, tire-os do forno e deixe esfriar.</p>
+                </div>
+            </div>
+
+        </main>
     </div>
 </body>
 
