@@ -71,6 +71,7 @@ h2 {
 
 .recipe-card:hover {
   transform: scale(1.05); /* Aumenta apenas o card */
+  cursor: pointer;
 }
 
 .icons {
