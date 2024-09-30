@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/formAdmin.css">
     <title>Formulário ao Lado da Imagem</title>
 </head>
+
 <body>
     <div class="outer-container">
         <div class="container">
             <div class="imagem-container"></div>
-            
-            <form method="POST" active="postarReceita.php">
+
+            <form method="POST" action="postarReceita.php">
                 <h1>Formulário de Postagens de Receitas</h1>
                 <p>Todos os Campos São Obrigatórios</p>
                 <label for="capaReceita">Imagem de Capa:</label>
                 <p class="dimensoes">A imagem precisa ter dimensões 300px por 200px</p>
-                <input id="capaReceita" placeholder="ksksks" type="file" accept="image/*" required onchange="previewImagem(event)">
+                <input id="capaReceita" type="file" accept="image/*" required onchange="previewImagem(event)">
                 <!-- Elemento onde a imagem será exibida -->
                 <div class="imagem-preview-container">
-                <img class="arquivo" id="preview" src="#" alt="Prévia da imagem" >
+                    <img class="arquivo" id="preview" src="#" alt="Prévia da imagem">
                 </div>
 
                 <label for="nomeReceita">Prato:</label>
                 <input class="placeholder" id="nomeReceita" type="text" placeholder="Nome do prato" required><br>
 
                 <label for="ingredienteReceita">Ingredientes:</label>
-                <textarea class="placeholder" id="ingredienteReceita" placeholder="Descreva em lista todos os ingredientes necessários" rows="4" required></textarea><br>
+                <textarea class="placeholder" id="ingredienteReceita"
+                    placeholder="Descreva em lista todos os ingredientes necessários" rows="4" required></textarea><br>
 
                 <label for="etapasReceita">Passo à Passo:</label>
-                <textarea class="placeholder" id="etapasReceita" placeholder="Descreva o passo a passo para preparar o prato" rows="4" required></textarea><br>
+                <textarea class="placeholder" id="etapasReceita"
+                    placeholder="Descreva o passo a passo para preparar o prato" rows="4" required></textarea><br>
 
                 <label for="tipoReceita">Tipo de prato:</label>
                 <select name="tipoReceita" id="tipoReceita">
@@ -38,10 +42,10 @@
                     <option value="Drink">Drink</option>
                 </select>
 
-                <label  style="text-align: center;" >Esta é uma receita temática?</label>
+                <label style="text-align: center;">Esta é uma receita temática?</label>
                 <div class="checkbox-wrapper-10">
-                <input class="tgl tgl-flip" id="cb5" type="checkbox" checked />
-                <label class="tgl-btn" data-tg-off="Não" data-tg-on="Sim" for="cb5"></label>
+                    <input class="tgl tgl-flip" id="cb5" type="checkbox" checked>
+                    <label class="tgl-btn" data-tg-off="Não" data-tg-on="Sim" for="cb5"></label>
                 </div>
                 <div style="text-align: center;">
                     <button class="btn-principal" type="submit">Enviar</button>
@@ -50,16 +54,17 @@
             </form>
         </div>
     </div>
-</body>
-<script>
-    function previewImagem(event) {
-        var reader = new FileReader();
-        reader.onload = function() {
-            var preview = document.getElementById('preview');
-            preview.src = reader.result;
-            preview.style.display = 'block'; // Exibe a imagem
-        };
-        reader.readAsDataURL(event.target.files[0]); // Lê o arquivo selecionado
-    }
+    <script>
+        function previewImagem(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var preview = document.getElementById('preview');
+                preview.src = reader.result;
+                preview.style.display = 'block'; // Exibe a imagem
+            };
+            reader.readAsDataURL(event.target.files[0]); // Lê o arquivo selecionado
+        }
     </script>
+</body>
+
 </html>
