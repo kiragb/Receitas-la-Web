@@ -1,7 +1,12 @@
+@use "global.scss" as global;
+
 body {
-  background-repeat: no-repeat; /* Não repetir a imagem */
-  background-position: -1150px 1350px;  /* Posiciona no canto inferior esquerdo */
-  background-size: 2500px; /* Mantém o tamanho original da imagem */
+  background-repeat: no-repeat;
+  /* Não repetir a imagem */
+  background-position: -1150px 1350px;
+  /* Posiciona no canto inferior esquerdo */
+  background-size: 2500px;
+  /* Mantém o tamanho original da imagem */
 }
 
 @font-face {
@@ -53,9 +58,12 @@ h2 {
 }
 
 .recipe-card img {
-  width: 100%; /* A imagem ocupa toda a largura do card */
-  height: 150px; /* Define uma altura fixa para todas as imagens */
-  object-fit: cover; /* Mantém o aspecto da imagem, cortando se necessário */
+  width: 100%;
+  /* A imagem ocupa toda a largura do card */
+  height: 150px;
+  /* Define uma altura fixa para todas as imagens */
+  object-fit: cover;
+  /* Mantém o aspecto da imagem, cortando se necessário */
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   border-bottom-right-radius: 0;
@@ -67,12 +75,14 @@ h2 {
   color: #ffffff;
   font-family: "Caveat Brush", cursive;
   margin-top: 10px;
-  margin-bottom: 100px; /* Remove o espaço extra abaixo do texto */
+  margin-bottom: 100px;
+  /* Remove o espaço extra abaixo do texto */
   /* Alinha o texto ao topo do card, logo abaixo da imagem */
 }
 
 .recipe-card:hover {
-  transform: scale(1.05); /* Aumenta apenas o card */
+  transform: scale(1.05);
+  /* Aumenta apenas o card */
   cursor: pointer;
 }
 
@@ -80,7 +90,8 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 60px; /* Reduz a margem superior para mover os ícones para cima */
+  margin-top: 60px;
+  /* Reduz a margem superior para mover os ícones para cima */
   margin-bottom: 50px;
 }
 
@@ -93,12 +104,15 @@ h2 {
 }
 
 .icons i {
-  margin-right: 3px; /* Espaço entre o ícone e o texto */
-  font-size: 15px; /* Tamanho do ícone */
+  margin-right: 3px;
+  /* Espaço entre o ícone e o texto */
+  font-size: 15px;
+  /* Tamanho do ícone */
 }
 
 .icons span i.fa-heart {
-  color: red; /* Ícone de coração vermelho */
+  color: red;
+  /* Ícone de coração vermelho */
 }
 
 @media (min-width: 640px) {
@@ -114,6 +128,25 @@ h2 {
   }
 }
 
+// Botão de adicionar
+div.adicionar-receita {
+  position: fixed;
+  bottom: 32px;
+  right: 16px;
+
+  &>a {
+    text-decoration: none;
+    background-color: global.$cor-botao-principal;
+    color: white;
+    padding: 16px;
+    border-radius: 32px;
+
+    &:hover {
+      background-color: global.$cor-botao-principal-hover;
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .recipes {
     grid-template-columns: 1fr 1fr 1fr;
@@ -125,7 +158,8 @@ h2 {
     justify-content: space-around;
   }
 
-  #imgLinks, .recipes {
+  #imgLinks,
+  .recipes {
     margin: auto;
     max-width: 1280px;
   }
