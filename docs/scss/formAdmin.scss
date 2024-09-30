@@ -44,6 +44,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px 0 0 20px;
+    display: none;
 }
 
 .dimensoes {
@@ -198,4 +199,10 @@ textarea {
 .checkbox-wrapper-10 .tgl-flip:checked+.tgl-btn:after {
     transform: rotateY(0);
     background: #14b608;
+}
+
+@media (min-width: 1024px) {
+    div.imagem-container {
+        display: block;
+    }
 }
