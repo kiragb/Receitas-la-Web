@@ -18,14 +18,14 @@
                 <p>Todos os Campos São Obrigatórios</p>
                 <label for="capaReceita">Imagem de Capa:</label>
                 <p class="dimensoes">A imagem precisa ter dimensões 300px por 200px</p>
-                <input id="capaReceita" type="file" accept="image/*" required onchange="previewImagem(event)">
+                <input id="capaReceita" name="capaReceita" type="file" accept="image/*" required onchange="previewImagem(event)">
                 <!-- Elemento onde a imagem será exibida -->
                 <div class="imagem-preview-container">
                     <img class="arquivo" id="preview" src="#" alt="Prévia da imagem">
                 </div>
 
                 <label for="nomeReceita">Prato:</label>
-                <input class="placeholder" id="nomeReceita" type="text" placeholder="Nome do prato" required><br>
+                <input class="placeholder" id="nomeReceita" name="nomeReceita" type="text" placeholder="Nome do prato" required><br>
 
                 <label for="ingredienteReceita">Ingredientes:</label>
                 <textarea class="placeholder" id="ingredienteReceita"
@@ -44,7 +44,7 @@
 
                 <label style="text-align: center;">Esta é uma receita temática?</label>
                 <div class="checkbox-wrapper-10">
-                    <input class="tgl tgl-flip" id="cb5" type="checkbox" checked>
+                    <input class="tgl tgl-flip" id="cb5" type="checkbox" name="tematica" checked>
                     <label class="tgl-btn" data-tg-off="Não" data-tg-on="Sim" for="cb5"></label>
                 </div>
                 <div style="text-align: center;">
