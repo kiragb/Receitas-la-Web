@@ -53,8 +53,8 @@ table {
 }
 
 /* CSS principal */
-body {
-  font-family: sans-serif;
+body, button, input {
+  font-family: "Caveat Brush", cursive;
 }
 
 h1 {
