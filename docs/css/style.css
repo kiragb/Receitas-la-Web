@@ -20,6 +20,7 @@
   cursor: pointer;
   background-color: #c38f65;
   font-family: "Caveat Brush", cursive;
+  font-size:110%;
 }
 
 .navLink {
@@ -33,6 +34,7 @@
   display: inline-block;
   margin: 4px 0;
   cursor: pointer;
+  font-size:110%;
 }
 
 .navLink:hover {
