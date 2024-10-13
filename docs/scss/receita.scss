@@ -45,8 +45,13 @@ div.painel {
         font-weight: 600;
     }
 
-    & li {
+    & ul>li {
         list-style: disc;
+        margin-bottom: 2px;
+    }
+
+    & ol>li {
+        list-style: decimal;
         margin-bottom: 2px;
     }
 

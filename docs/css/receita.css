@@ -40,8 +40,12 @@ div.painel > h3 {
   margin-bottom: 4px;
   font-weight: 600;
 }
-div.painel li {
+div.painel ul > li {
   list-style: disc;
+  margin-bottom: 2px;
+}
+div.painel ol > li {
+  list-style: decimal;
   margin-bottom: 2px;
 }
 div.painel > p {
