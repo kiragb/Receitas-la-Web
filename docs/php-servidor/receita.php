@@ -8,28 +8,50 @@ class Receita
     public array $ingredientes;
     public array $modo_de_preparo;
 }
+$servername = "localhost";
+$username = "root";
+$password = "";
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=receita_a_la_web", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+
+}
+$sql = "SELECT * FROM receita where id=1";
+$resultado = $conn->query($sql);
+$dado = $resultado->fetch();
+
+//ingredientes 
+$ingredientes = $conn->query("select * from ingredientes where receita_id=1");
+
 
 $cupcake = new Receita();
 
-$cupcake->titulo_receita = "Cupcake de Chocolate";
-$cupcake->minutos_para_preparo = 20;
-$cupcake->porções = 10;
-$cupcake->imagem_url = "img/cupcake-de-chocolate.jpg";
-$cupcake->ingredientes = array(
-    "3 ovos",
-    "leite",
-    "1 xícara (chá) de leite",
-    "açúcar",
-    "2 xícaras (chá) de açúcar",
-    "farinha de trigo",
-    "2 xícaras (chá) de farinha de trigo",
-    "fermento em pó químico",
-    "1 colher (sopa) de fermento em pó",
-    "manteiga sem sal",
-    "1/2 xícara (chá) de manteiga sem sal",
-    "chocolate em pó",
-    "4 colheres (sopa) de chocolate em pó",
-);
+$cupcake->titulo_receita = $dado["titulo"];
+$cupcake->minutos_para_preparo = $dado["minutos"];
+$cupcake->porções = $dado["porcao"];
+$cupcake->imagem_url = $dado["imagem"];
+$cupcake->ingredientes = [];
+while ($linha = $ingredientes->fetch()) {
+    $cupcake->ingredientes[] = $linha["ingrediente"];
+}
+// $cupcake->ingredientes = array(
+//     "3 ovos",
+//     "leite",
+//     "1 xícara (chá) de leite",
+//     "açúcar",
+//     "2 xícaras (chá) de açúcar",
+//     "farinha de trigo",
+//     "2 xícaras (chá) de farinha de trigo",
+//     "fermento em pó químico",
+//     "1 colher (sopa) de fermento em pó",
+//     "manteiga sem sal",
+//     "1/2 xícara (chá) de manteiga sem sal",
+//     "chocolate em pó",
+//     "4 colheres (sopa) de chocolate em pó",
+// );
 $cupcake->modo_de_preparo = array(
     "Acenda o forno, enquanto separa as forminhas de papel e as posiciona na assadeira.",
     "Peneire, em uma tigela grande, o chocolate em pó, a farinha e o fermento.",
