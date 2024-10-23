@@ -26,6 +26,8 @@ $dado = $resultado->fetch();
 //ingredientes 
 $ingredientes = $conn->query("select * from ingredientes where receita_id=1");
 
+//modo de preparo
+$modo_de_preparo = $conn->query("Select * from modo_de_preparo where receita_id=1");
 
 $cupcake = new Receita();
 
@@ -37,6 +39,11 @@ $cupcake->ingredientes = [];
 while ($linha = $ingredientes->fetch()) {
     $cupcake->ingredientes[] = $linha["ingrediente"];
 }
+$cupcake->modo_de_preparo = [];
+while ($linha = $modo_de_preparo->fetch()) {
+    $cupcake->modo_de_preparo[] = $linha["etapa"];
+}
+
 // $cupcake->ingredientes = array(
 //     "3 ovos",
 //     "leite",
@@ -52,18 +59,18 @@ while ($linha = $ingredientes->fetch()) {
 //     "chocolate em pó",
 //     "4 colheres (sopa) de chocolate em pó",
 // );
-$cupcake->modo_de_preparo = array(
-    "Acenda o forno, enquanto separa as forminhas de papel e as posiciona na assadeira.",
-    "Peneire, em uma tigela grande, o chocolate em pó, a farinha e o fermento.",
-    "Separe cuidadosamente as gemas das claras e coloque-as em tigelas separadas.",
-    "Bata a manteiga e o açúcar na batedeira.",
-    "Quando estiver formado um creme homogêneo e macio, acrescente as gemas uma a uma e bata mais.",
-    "Em seguida, adicione os ingredientes peneirados e o leite.",
-    "Bata as claras em neve na batedeira ou com um batedor manual.",
-    "Coloque a massa nas forminhas e leve para assar.",
-    "Deixe no forno por, aproximadamente, 20 minutos.",
-    "Faça o teste do palito e, se os cupcakes estiverem prontos, tire-os do forno e deixe esfriar.",
-);
+// $cupcake->modo_de_preparo = array(
+//     "Acenda o forno, enquanto separa as forminhas de papel e as posiciona na assadeira.",
+//     "Peneire, em uma tigela grande, o chocolate em pó, a farinha e o fermento.",
+//     "Separe cuidadosamente as gemas das claras e coloque-as em tigelas separadas.",
+//     "Bata a manteiga e o açúcar na batedeira.",
+//     "Quando estiver formado um creme homogêneo e macio, acrescente as gemas uma a uma e bata mais.",
+//     "Em seguida, adicione os ingredientes peneirados e o leite.",
+//     "Bata as claras em neve na batedeira ou com um batedor manual.",
+//     "Coloque a massa nas forminhas e leve para assar.",
+//     "Deixe no forno por, aproximadamente, 20 minutos.",
+//     "Faça o teste do palito e, se os cupcakes estiverem prontos, tire-os do forno e deixe esfriar.",
+// );
 
 ?>
 

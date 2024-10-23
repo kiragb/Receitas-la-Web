@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23/10/2024 às 01:37
+-- Tempo de geração: 24/10/2024 às 00:06
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -36,6 +36,18 @@ CREATE TABLE `ingredientes` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `modo_de_preparo`
+--
+
+CREATE TABLE `modo_de_preparo` (
+  `id` int(11) NOT NULL,
+  `receita_id` int(11) NOT NULL,
+  `etapa` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `receita`
 --
 
@@ -59,6 +71,13 @@ ALTER TABLE `ingredientes`
   ADD KEY `receita_id` (`receita_id`);
 
 --
+-- Índices de tabela `modo_de_preparo`
+--
+ALTER TABLE `modo_de_preparo`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `receita_id` (`receita_id`);
+
+--
 -- Índices de tabela `receita`
 --
 ALTER TABLE `receita`
@@ -72,6 +91,12 @@ ALTER TABLE `receita`
 -- AUTO_INCREMENT de tabela `ingredientes`
 --
 ALTER TABLE `ingredientes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `modo_de_preparo`
+--
+ALTER TABLE `modo_de_preparo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -89,6 +114,12 @@ ALTER TABLE `receita`
 --
 ALTER TABLE `ingredientes`
   ADD CONSTRAINT `ingredientes_ibfk_1` FOREIGN KEY (`receita_id`) REFERENCES `receita` (`id`);
+
+--
+-- Restrições para tabelas `modo_de_preparo`
+--
+ALTER TABLE `modo_de_preparo`
+  ADD CONSTRAINT `modo_de_preparo_ibfk_1` FOREIGN KEY (`receita_id`) REFERENCES `receita` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
