@@ -3,7 +3,8 @@ require "classes/Receita.php";
 require "servicos/ReceitaServico.php";
 
 $servico = new ReceitaServico();
-$receita = $servico->buscarReceitaPorID($_GET["receita_id"]);
+$id = $_GET["receita_id"] ? $_GET["receita_id"] : 0;
+$receita = $servico->buscarReceitaPorID($id);
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +15,9 @@ $receita = $servico->buscarReceitaPorID($_GET["receita_id"]);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acessar receitas à la web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
-    <link rel="stylesheet" href="css/receita.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+    <link rel="stylesheet" href="/css/receita.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
 </head>
 

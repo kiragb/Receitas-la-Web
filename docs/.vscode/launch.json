@@ -11,8 +11,8 @@
             "runtimeArgs": [
                 "-S",
                 "localhost:8000",
-                "-t",
-                "./php-servidor"
+                // "-t",
+                // "./php-servidor"
             ],
             "port": 9003,
             "serverReadyAction": {
