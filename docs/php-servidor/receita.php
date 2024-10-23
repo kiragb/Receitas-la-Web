@@ -1,77 +1,9 @@
 <?php
-class Receita
-{
-    public string $titulo_receita;
-    public int $minutos_para_preparo;
-    public int $porções;
-    public string $imagem_url;
-    public array $ingredientes;
-    public array $modo_de_preparo;
-}
-$servername = "localhost";
-$username = "root";
-$password = "";
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=receita_a_la_web", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+require "classes/Receita.php";
+require "servicos/ReceitaServico.php";
 
-}
-$sql = "SELECT * FROM receita where id=1";
-$resultado = $conn->query($sql);
-$dado = $resultado->fetch();
-
-//ingredientes 
-$ingredientes = $conn->query("select * from ingredientes where receita_id=1");
-
-//modo de preparo
-$modo_de_preparo = $conn->query("Select * from modo_de_preparo where receita_id=1");
-
-$cupcake = new Receita();
-
-$cupcake->titulo_receita = $dado["titulo"];
-$cupcake->minutos_para_preparo = $dado["minutos"];
-$cupcake->porções = $dado["porcao"];
-$cupcake->imagem_url = $dado["imagem"];
-$cupcake->ingredientes = [];
-while ($linha = $ingredientes->fetch()) {
-    $cupcake->ingredientes[] = $linha["ingrediente"];
-}
-$cupcake->modo_de_preparo = [];
-while ($linha = $modo_de_preparo->fetch()) {
-    $cupcake->modo_de_preparo[] = $linha["etapa"];
-}
-
-// $cupcake->ingredientes = array(
-//     "3 ovos",
-//     "leite",
-//     "1 xícara (chá) de leite",
-//     "açúcar",
-//     "2 xícaras (chá) de açúcar",
-//     "farinha de trigo",
-//     "2 xícaras (chá) de farinha de trigo",
-//     "fermento em pó químico",
-//     "1 colher (sopa) de fermento em pó",
-//     "manteiga sem sal",
-//     "1/2 xícara (chá) de manteiga sem sal",
-//     "chocolate em pó",
-//     "4 colheres (sopa) de chocolate em pó",
-// );
-// $cupcake->modo_de_preparo = array(
-//     "Acenda o forno, enquanto separa as forminhas de papel e as posiciona na assadeira.",
-//     "Peneire, em uma tigela grande, o chocolate em pó, a farinha e o fermento.",
-//     "Separe cuidadosamente as gemas das claras e coloque-as em tigelas separadas.",
-//     "Bata a manteiga e o açúcar na batedeira.",
-//     "Quando estiver formado um creme homogêneo e macio, acrescente as gemas uma a uma e bata mais.",
-//     "Em seguida, adicione os ingredientes peneirados e o leite.",
-//     "Bata as claras em neve na batedeira ou com um batedor manual.",
-//     "Coloque a massa nas forminhas e leve para assar.",
-//     "Deixe no forno por, aproximadamente, 20 minutos.",
-//     "Faça o teste do palito e, se os cupcakes estiverem prontos, tire-os do forno e deixe esfriar.",
-// );
-
+$servico = new ReceitaServico();
+$receita = $servico->buscarReceitaPorID($_GET["receita_id"]);
 ?>
 
 <!DOCTYPE html>
@@ -105,50 +37,56 @@ while ($linha = $modo_de_preparo->fetch()) {
         </div>
     </div>
     <div class="pagina-de-receita">
-        <img src="<?= $cupcake->imagem_url ?>" alt="imagem de um <?= $cupcake->titulo_receita ?>">
+        <?php
+        if (!$receita) {
+            echo "<h1>Receita não encontrada</h1>";
+        } else {
+            ?>
+            <img src="<?= $receita->imagem_url ?>" alt="imagem de um <?= $receita->titulo_receita ?>">
 
-        <main>
-            <div class="ingredientes">
-                <div class="titulo">
+            <main>
+                <div class="ingredientes">
+                    <div class="titulo">
 
-                    <h1><?= $cupcake->titulo_receita ?></h1>
-                    <div class="icons">
-                        <span><i class="fas fa-clock"></i> <?= $cupcake->minutos_para_preparo ?> min</span>
-                        <span><i class="fas fa-heart"></i> 10,4 mil</span>
-                        <span><i class="fas fa-comment"></i> 500 </span>
+                        <h1><?= $receita->titulo_receita ?></h1>
+                        <div class="icons">
+                            <span><i class="fas fa-clock"></i> <?= $receita->minutos_para_preparo ?> min</span>
+                            <span><i class="fas fa-heart"></i> 10,4 mil</span>
+                            <span><i class="fas fa-comment"></i> 500 </span>
+                        </div>
+                    </div>
+
+                    <div class="painel">
+                        <h2> Ingredientes
+                            (<?= $receita->porções > 1 ? $receita->porções . " porções" : $receita->porções . " porção" ?>)
+                        </h2>
+                        <ul>
+                            <?php
+                            foreach ($receita->ingredientes as $ingrediente) {
+                                echo "<li>" . $ingrediente . "</li>";
+                            }
+                            ?>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="modo-de-preparo">
+
+                    <div class="painel">
+                        <h2>Modo de preparo</h2>
+                        <ol>
+                            <?php
+                            foreach ($receita->modo_de_preparo as $etapa) {
+                                echo "<li>" . $etapa . "</li>";
+                            }
+                            ?>
+                        </ol>
                     </div>
                 </div>
 
-                <div class="painel">
-                    <h2> Ingredientes
-                        (<?= $cupcake->porções > 1 ? $cupcake->porções . " porções" : $cupcake->porções . " porção" ?>)
-                    </h2>
-                    <ul>
-                        <?php
-                        foreach ($cupcake->ingredientes as $ingrediente) {
-                            echo "<li>" . $ingrediente . "</li>";
-                        }
-                        ?>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="modo-de-preparo">
-
-                <div class="painel">
-                    <h2>Modo de preparo</h2>
-                    <ol>
-                        <?php
-                        foreach ($cupcake->modo_de_preparo as $etapa) {
-                            echo "<li>" . $etapa . "</li>";
-                        }
-                        ?>
-                    </ol>
-                </div>
-            </div>
-
-        </main>
+            </main>
+        <?php } ?>
     </div>
 </body>
 
