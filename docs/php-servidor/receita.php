@@ -30,11 +30,11 @@ $receita = $servico->buscarReceitaPorID($id);
             </div>
         </form>
         <div id="navbar">
-            <a class="navLink" href="index.html">Tematicas</a>
-            <a class="navLink" href="index.html">Salgados</a>
-            <a class="navLink" href="index.html">Doces</a>
-            <a class="navLink" href="index.html">Drinks</a>
-            <a class="navButton" href="login.html">Login</a>
+            <a class="navLink" href="index.php">Tematicas</a>
+            <a class="navLink" href="index.php">Salgados</a>
+            <a class="navLink" href="index.php">Doces</a>
+            <a class="navLink" href="index.php">Drinks</a>
+            <a class="navButton" href="login.php">Login</a>
         </div>
     </div>
     <div class="pagina-de-receita">

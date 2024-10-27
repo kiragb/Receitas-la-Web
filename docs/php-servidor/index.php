@@ -12,12 +12,12 @@ $receitas = $servico->buscarReceitas();
 <head>
   <title>Receita à la Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="/css/global.css">
   <!-- CSS do NavBar-->
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!--CSS Receitas-->
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="/css/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!--Font Family-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,15 +34,15 @@ $receitas = $servico->buscarReceitas();
       </div>
     </form>
     <div id="navbar">
-      <a class="navLink" href="index.html">Tematicas</a>
-      <a class="navLink" href="index.html">Salgados</a>
-      <a class="navLink" href="index.html">Doces</a>
-      <a class="navLink" href="index.html">Drinks</a>
-      <a class="navButton" href="login.html">Login</a>
+      <a class="navLink" href="index.php">Tematicas</a>
+      <a class="navLink" href="index.php">Salgados</a>
+      <a class="navLink" href="index.php">Doces</a>
+      <a class="navLink" href="index.php">Drinks</a>
+      <a class="navButton" href="login.php">Login</a>
     </div>
   </div>
   <div id="logo">
-    <img src="img/logo-cropped.png" alt="logo">
+    <img src="/img/logo-cropped.png" alt="logo">
   </div>
   <div id="imgLinks">
     <div class="linkContainer">
@@ -84,7 +84,7 @@ $receitas = $servico->buscarReceitas();
   <h2>ALGUMAS RECEITAS TEMÁTICAS...</h2>
   <div class="recipes">
     <div class="recipe-card">
-      <img src="img/gem.jpg" alt="Boneco de Gengibre">
+      <img src="/img/gem.jpg" alt="Boneco de Gengibre">
       <p>Boneco de Gengibre</p>
       <div class="icons">
         <span><i class="fas fa-clock"></i> 30 min</span>
@@ -93,7 +93,7 @@ $receitas = $servico->buscarReceitas();
       </div>
     </div>
     <div class="recipe-card">
-      <img src="img/donuts.jpeg" alt="A dama e o Vagabundo">
+      <img src="/img/donuts.jpeg" alt="A dama e o Vagabundo">
       <p>Macarronada</p>
       <div class="icons">
         <span><i class="fas fa-clock"></i> 30 min</span>
@@ -102,7 +102,7 @@ $receitas = $servico->buscarReceitas();
       </div>
     </div>
     <div class="recipe-card">
-      <img src="img/dama.jpeg" alt="Donuts dos Sipisons">
+      <img src="/img/dama.jpeg" alt="Donuts dos Sipisons">
 
       <p>Donuts dos Simpisons</p>
       <div class="icons">
@@ -113,7 +113,7 @@ $receitas = $servico->buscarReceitas();
     </div>
 
     <div class="recipe-card">
-      <img src="img/gem.jpg" alt="Boneco de Gengibre">
+      <img src="/img/gem.jpg" alt="Boneco de Gengibre">
       <p>Boneco de Gengibre</p>
       <div class="icons">
         <span><i class="fas fa-clock"></i> 30 min</span>
@@ -122,7 +122,7 @@ $receitas = $servico->buscarReceitas();
       </div>
     </div>
     <div class="recipe-card">
-      <img src="img/donuts.jpeg" alt="A dama e o Vagabundo">
+      <img src="/img/donuts.jpeg" alt="A dama e o Vagabundo">
       <p>Macarronada</p>
       <div class="icons">
         <span><i class="fas fa-clock"></i> 30 min</span>
@@ -131,7 +131,7 @@ $receitas = $servico->buscarReceitas();
       </div>
     </div>
     <div class="recipe-card">
-      <img src="img/dama.jpeg" alt="Donuts dos Sipisons">
+      <img src="/img/dama.jpeg" alt="Donuts dos Sipisons">
 
       <p>Donuts dos Simpisons</p>
       <div class="icons">
@@ -147,7 +147,7 @@ $receitas = $servico->buscarReceitas();
   </div>
 
   <div class="adicionar-receita">
-    <a href="formAdmin.html">
+    <a href="formAdmin.php">
       <i class="fa-solid fa-circle-plus"></i>
       Adicionar
     </a>
