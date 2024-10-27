@@ -59,7 +59,7 @@ $receita = $servico->buscarReceitaPorID($id);
 
                     <div class="painel">
                         <h2> Ingredientes
-                            (<?= $receita->porções > 1 ? $receita->porções . " porções" : $receita->porções . " porção" ?>)
+                            (<?= $receita->porcoes > 1 ? $receita->porcoes . " porções" : $receita->porcoes . " porção" ?>)
                         </h2>
                         <ul>
                             <?php

@@ -70,7 +70,7 @@ class ReceitaServico
         $receita->id = $dado["id"];
         $receita->titulo_receita = $dado["titulo"];
         $receita->minutos_para_preparo = $dado["minutos"];
-        $receita->porções = $dado["porcao"];
+        $receita->porcoes = $dado["porcao"];
         $receita->imagem_url = $dado["imagem"];
         $receita->ingredientes = [];
         $receita->modo_de_preparo = [];
