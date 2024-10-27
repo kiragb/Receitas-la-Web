@@ -44,17 +44,26 @@ class ReceitaServico
         return $receita;
     }
 
-    public function buscarReceitas()
+    public function buscarReceitas($tematica, $tipo = null)
     {
-        $sql = "SELECT * FROM receita";
-        $resultado = $this->conn->query($sql);
+        $sql = "SELECT * FROM receita WHERE tematica = :tematica";
+        if ($tipo !== null) {
+            $sql .= " AND tipo = :tipo";
+        }
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(":tematica", $tematica);
+        if ($tipo !== null) {
+            $stmt->bindParam(":tipo", $tipo);
+        }
+
+        $stmt->execute();
         $receitas = [];
 
-        if ($resultado->rowCount() == 0) {
+        if ($stmt->rowCount() == 0) {
             return null;
         }
 
-        $dados = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($dados as $dado) {
             $receitas[] = $this->gerarReceita($dado);

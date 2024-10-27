@@ -4,7 +4,8 @@ require "servicos/ReceitaServico.php";
 
 
 $servico = new ReceitaServico();
-$receitas = $servico->buscarReceitas();
+$receitas = $servico->buscarReceitas(false);
+$receitas_tematicas = $servico->buscarReceitas(true);
 ?>
 <!Doctype html>
 <html lang="pt-br">
@@ -83,63 +84,17 @@ $receitas = $servico->buscarReceitas();
 
   <h2>ALGUMAS RECEITAS TEMÁTICAS...</h2>
   <div class="recipes">
-    <div class="recipe-card">
-      <img src="/img/gem.jpg" alt="Boneco de Gengibre">
-      <p>Boneco de Gengibre</p>
-      <div class="icons">
-        <span><i class="fas fa-clock"></i> 30 min</span>
-        <span><i class="fas fa-heart"></i> 4,4 mil</span>
-        <span><i class="fas fa-comment"></i> 100 </span>
+  <?php foreach ($receitas_tematicas as $receita) { ?>
+      <div class="recipe-card" onclick="abrir_receita(<?= $receita->id ?>)">
+        <img src="<?= $receita->imagem_url ?>" alt="<?= $receita->titulo_receita ?>">
+        <p><?= $receita->titulo_receita ?></p>
+        <div class="icons">
+          <span><i class="fas fa-clock"></i> <?= $receita->minutos_para_preparo ?> min</span>
+          <span><i class="fas fa-heart"></i> 4,4 mil</span>
+          <span><i class="fas fa-comment"></i> 100 </span>
+        </div>
       </div>
-    </div>
-    <div class="recipe-card">
-      <img src="/img/donuts.jpeg" alt="A dama e o Vagabundo">
-      <p>Macarronada</p>
-      <div class="icons">
-        <span><i class="fas fa-clock"></i> 30 min</span>
-        <span><i class="fas fa-heart"></i> 4,4 mil</span>
-        <span><i class="fas fa-comment"></i> 100 </span>
-      </div>
-    </div>
-    <div class="recipe-card">
-      <img src="/img/dama.jpeg" alt="Donuts dos Sipisons">
-
-      <p>Donuts dos Simpisons</p>
-      <div class="icons">
-        <span><i class="fas fa-clock"></i> 30 min</span>
-        <span><i class="fas fa-heart"></i> 4,4 mil</span>
-        <span><i class="fas fa-comment"></i> 100 </span>
-      </div>
-    </div>
-
-    <div class="recipe-card">
-      <img src="/img/gem.jpg" alt="Boneco de Gengibre">
-      <p>Boneco de Gengibre</p>
-      <div class="icons">
-        <span><i class="fas fa-clock"></i> 30 min</span>
-        <span><i class="fas fa-heart"></i> 4,4 mil</span>
-        <span><i class="fas fa-comment"></i> 100 </span>
-      </div>
-    </div>
-    <div class="recipe-card">
-      <img src="/img/donuts.jpeg" alt="A dama e o Vagabundo">
-      <p>Macarronada</p>
-      <div class="icons">
-        <span><i class="fas fa-clock"></i> 30 min</span>
-        <span><i class="fas fa-heart"></i> 4,4 mil</span>
-        <span><i class="fas fa-comment"></i> 100 </span>
-      </div>
-    </div>
-    <div class="recipe-card">
-      <img src="/img/dama.jpeg" alt="Donuts dos Sipisons">
-
-      <p>Donuts dos Simpisons</p>
-      <div class="icons">
-        <span><i class="fas fa-clock"></i> 30 min</span>
-        <span><i class="fas fa-heart"></i> 4,4 mil</span>
-        <span><i class="fas fa-comment"></i> 100 </span>
-      </div>
-    </div>
+    <?php } ?>
   </div>
 
   <div class="copyright">
