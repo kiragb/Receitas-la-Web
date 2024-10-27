@@ -34,10 +34,10 @@ $receitas = $servico->buscarReceitas();
       </div>
     </form>
     <div id="navbar">
-      <a class="navLink" href="index.php">Tematicas</a>
-      <a class="navLink" href="index.php">Salgados</a>
-      <a class="navLink" href="index.php">Doces</a>
-      <a class="navLink" href="index.php">Drinks</a>
+      <a class="navLink" href="/php-servidor/index.php">Tematicas</a>
+      <a class="navLink" href="/php-servidor/index.php">Salgados</a>
+      <a class="navLink" href="/php-servidor/index.php">Doces</a>
+      <a class="navLink" href="/php-servidor/index.php">Drinks</a>
       <a class="navButton" href="login.php">Login</a>
     </div>
   </div>
@@ -147,7 +147,7 @@ $receitas = $servico->buscarReceitas();
   </div>
 
   <div class="adicionar-receita">
-    <a href="formAdmin.php">
+    <a href="/php-servidor/formAdmin.php">
       <i class="fa-solid fa-circle-plus"></i>
       Adicionar
     </a>
@@ -155,7 +155,7 @@ $receitas = $servico->buscarReceitas();
 
   <script>
     function abrir_receita(id) {
-      window.location.href = `${window.location.pathname}/receita.php?receita_id=${id}`
+      window.location.href = `http://${window.location.host}/php-servidor/receita.php?receita_id=${id}`
     }
   </script>
 </body>
