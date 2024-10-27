@@ -1,6 +1,7 @@
 <?php
 class Receita
 {
+    public int $id;
     public string $titulo_receita;
     public int $minutos_para_preparo;
     public int $porções;
