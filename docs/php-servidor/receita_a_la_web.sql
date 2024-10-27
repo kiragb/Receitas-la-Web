@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24/10/2024 às 00:06
+-- Tempo de geração: 27/10/2024 às 22:55
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -56,7 +56,9 @@ CREATE TABLE `receita` (
   `titulo` varchar(200) NOT NULL,
   `minutos` int(11) NOT NULL,
   `porcao` int(11) NOT NULL,
-  `imagem` varchar(255) NOT NULL
+  `imagem` varchar(255) NOT NULL,
+  `tipo` varchar(10) NOT NULL,
+  `tematica` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -113,13 +115,13 @@ ALTER TABLE `receita`
 -- Restrições para tabelas `ingredientes`
 --
 ALTER TABLE `ingredientes`
-  ADD CONSTRAINT `ingredientes_ibfk_1` FOREIGN KEY (`receita_id`) REFERENCES `receita` (`id`);
+  ADD CONSTRAINT `ingredientes_ibfk_1` FOREIGN KEY (`receita_id`) REFERENCES `receita` (`id`) ON DELETE CASCADE;
 
 --
 -- Restrições para tabelas `modo_de_preparo`
 --
 ALTER TABLE `modo_de_preparo`
-  ADD CONSTRAINT `modo_de_preparo_ibfk_1` FOREIGN KEY (`receita_id`) REFERENCES `receita` (`id`);
+  ADD CONSTRAINT `modo_de_preparo_ibfk_1` FOREIGN KEY (`receita_id`) REFERENCES `receita` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

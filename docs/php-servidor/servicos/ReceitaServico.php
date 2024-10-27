@@ -65,6 +65,7 @@ class ReceitaServico
 
     public function criarReceita($dado, $imagem)
     {
+        $dado["tematica"] = $dado["tematica"] === "on";
         $receita = $this->gerarReceita($dado);
         $receita->imagem_url = "/img/$imagem";
         $receita->ingredientes = explode("\n", $_POST["ingredientes"]);
@@ -73,13 +74,15 @@ class ReceitaServico
         try {
             $this->conn->beginTransaction();
 
-            $sql = "INSERT INTO receita (titulo, minutos, porcao, imagem) VALUES (:titulo, :minutos, :porcao, :imagem);";
+            $sql = "INSERT INTO receita (titulo, minutos, porcao, imagem, tipo, tematica) VALUES (:titulo, :minutos, :porcao, :imagem, :tipo, :tematica);";
             $stmt = $this->conn->prepare($sql);
 
             $stmt->bindParam(":titulo", $receita->titulo_receita);
             $stmt->bindParam(":minutos", $receita->minutos_para_preparo);
             $stmt->bindParam(":porcao", $receita->porcoes);
             $stmt->bindParam(":imagem", $receita->imagem_url);
+            $stmt->bindParam(":tipo", $receita->tipo);
+            $stmt->bindParam(":tematica", $receita->tematica);
             $stmt->execute();
 
             $id = $this->conn->lastInsertId();
@@ -140,6 +143,8 @@ class ReceitaServico
         $receita->titulo_receita = $dado["titulo"];
         $receita->minutos_para_preparo = $dado["minutos"];
         $receita->porcoes = $dado["porcao"];
+        $receita->tipo = $dado["tipo"];
+        $receita->tematica = $dado["tematica"];
         $receita->imagem_url = array_key_exists("imagem", $dado) ? $dado["imagem"] : "";
         $receita->ingredientes = [];
         $receita->modo_de_preparo = [];

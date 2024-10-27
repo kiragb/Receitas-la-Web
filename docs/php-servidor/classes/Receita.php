@@ -8,4 +8,6 @@ class Receita
     public string $imagem_url;
     public array $ingredientes;
     public array $modo_de_preparo;
+    public string $tipo;
+    public bool $tematica;
 }
