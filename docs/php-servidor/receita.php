@@ -22,21 +22,7 @@ $receita = $servico->buscarReceitaPorID($id);
 </head>
 
 <body>
-    <div id="cabecalho">
-        <form method="post" action="busca.php">
-            <div class="search-box">
-                <input class="busca" placeholder="Buscar..." name="buscar" type="text">
-                <button class="search-button"><i class="fas fa-search"></i></button>
-            </div>
-        </form>
-        <div id="navbar">
-            <a class="navLink" href="/php-servidor/index.php">Tematicas</a>
-            <a class="navLink" href="/php-servidor/index.php">Salgados</a>
-            <a class="navLink" href="/php-servidor/index.php">Doces</a>
-            <a class="navLink" href="/php-servidor/index.php">Drinks</a>
-            <a class="navButton" href="login.php">Login</a>
-        </div>
-    </div>
+    <?php require "componentes/cabecalho.php"; ?>
     <div class="pagina-de-receita">
         <?php
         if (!$receita) {

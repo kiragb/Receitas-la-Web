@@ -60,7 +60,7 @@ class ReceitaServico
         $receitas = [];
 
         if ($stmt->rowCount() == 0) {
-            return null;
+            return [];
         }
 
         $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);

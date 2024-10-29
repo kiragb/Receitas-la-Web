@@ -2,10 +2,16 @@
 require "classes/Receita.php";
 require "servicos/ReceitaServico.php";
 
+$tipo = array_key_exists("tipo", $_GET) ? $_GET["tipo"] : null;
 
 $servico = new ReceitaServico();
-$receitas = $servico->buscarReceitas(false);
-$receitas_tematicas = $servico->buscarReceitas(true);
+if ($tipo !== "Tematica") {
+  $receitas = $servico->buscarReceitas(false, $tipo);
+  $receitas_tematicas = $servico->buscarReceitas(true, $tipo);
+} else {
+  $receitas = [];
+  $receitas_tematicas = $servico->buscarReceitas(true, null);
+}
 ?>
 <!Doctype html>
 <html lang="pt-br">
@@ -27,21 +33,7 @@ $receitas_tematicas = $servico->buscarReceitas(true);
 </head>
 
 <body>
-  <div id="cabecalho">
-    <form method="post" action="busca.php">
-      <div class="search-box">
-        <input class="busca" placeholder="Buscar..." name="buscar" type="text">
-        <button class="search-button"><i class="fas fa-search"></i></button>
-      </div>
-    </form>
-    <div id="navbar">
-      <a class="navLink" href="/php-servidor/index.php">Tematicas</a>
-      <a class="navLink" href="/php-servidor/index.php">Salgados</a>
-      <a class="navLink" href="/php-servidor/index.php">Doces</a>
-      <a class="navLink" href="/php-servidor/index.php">Drinks</a>
-      <a class="navButton" href="login.php">Login</a>
-    </div>
-  </div>
+  <?php require "componentes/cabecalho.php"; ?>
   <div id="logo">
     <img src="/img/logo-cropped.png" alt="logo">
   </div>
@@ -67,24 +59,30 @@ $receitas_tematicas = $servico->buscarReceitas(true);
       <div class="center">Tematicas</div>
     </div>
   </div>
-  <h2>ALGUMAS RECEITAS...</h2>
-  <div class="recipes">
-    <?php foreach ($receitas as $receita) { ?>
-      <div class="recipe-card" onclick="abrir_receita(<?= $receita->id ?>)">
-        <img src="<?= $receita->imagem_url ?>" alt="<?= $receita->titulo_receita ?>">
-        <p><?= $receita->titulo_receita ?></p>
-        <div class="icons">
-          <span><i class="fas fa-clock"></i> <?= $receita->minutos_para_preparo ?> min</span>
-          <span><i class="fas fa-heart"></i> 4,4 mil</span>
-          <span><i class="fas fa-comment"></i> 100 </span>
+  <?php if ($tipo !== "Tematica") { ?>
+    <h2>ALGUMAS RECEITAS...</h2>
+    <div class="recipes">
+      <?php if (count($receitas) == 0)
+        echo "<h2>Sem nenhuma receita</h2>"; ?>
+      <?php foreach ($receitas as $receita) { ?>
+        <div class="recipe-card" onclick="abrir_receita(<?= $receita->id ?>)">
+          <img src="<?= $receita->imagem_url ?>" alt="<?= $receita->titulo_receita ?>">
+          <p><?= $receita->titulo_receita ?></p>
+          <div class="icons">
+            <span><i class="fas fa-clock"></i> <?= $receita->minutos_para_preparo ?> min</span>
+            <span><i class="fas fa-heart"></i> 4,4 mil</span>
+            <span><i class="fas fa-comment"></i> 100 </span>
+          </div>
         </div>
-      </div>
-    <?php } ?>
-  </div>
+      <?php } ?>
+    </div>
+  <?php } ?>
 
   <h2>ALGUMAS RECEITAS TEMÁTICAS...</h2>
   <div class="recipes">
-  <?php foreach ($receitas_tematicas as $receita) { ?>
+    <?php if (count($receitas_tematicas) == 0)
+      echo "<h2>Sem nenhuma receita</h2>"; ?>
+    <?php foreach ($receitas_tematicas as $receita) { ?>
       <div class="recipe-card" onclick="abrir_receita(<?= $receita->id ?>)">
         <img src="<?= $receita->imagem_url ?>" alt="<?= $receita->titulo_receita ?>">
         <p><?= $receita->titulo_receita ?></p>
