@@ -26,122 +26,16 @@
 </div>
 <h2>ALGUMAS RECEITAS...</h2>
 <div class="recipes">
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/muffin.png" alt="Muffin">
-        <p>Muffin</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card" onclick="abrir_receita()">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/cupcake-de-chocolate.jpg" alt="cupcake-de-chocolate">
-        <p>Cupcake</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/tiramisu.jpeg" alt="Tiramisu">
-        <p>Tiramisu</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/ratatoulle.jpeg" alt="Ratatouille">
-        <p>Ratatouille</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/lasanha.jpeg" alt="Lasagna">
-        <p>Lasagna</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/limao.jpeg" alt="Lime Pie">
-        <p>Lime Pie</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
+    @for (item of receitas.receitas; track item.id) {
+    <app-receita-card [receita]="item"></app-receita-card>
+    }
 </div>
 
 <h2>ALGUMAS RECEITAS TEMÁTICAS...</h2>
 <div class="recipes">
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/gem.jpg" alt="Boneco de Gengibre">
-        <p>Boneco de Gengibre</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/donuts.jpeg" alt="A dama e o Vagabundo">
-        <p>Macarronada</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/dama.jpeg" alt="Donuts dos Sipisons">
-
-        <p>Donuts dos Simpisons</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/gem.jpg" alt="Boneco de Gengibre">
-        <p>Boneco de Gengibre</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/donuts.jpeg" alt="A dama e o Vagabundo">
-        <p>Macarronada</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
-    <div class="recipe-card">
-        <img src="https://kiragb.github.io/Receitas-la-Web/img/dama.jpeg" alt="Donuts dos Sipisons">
-
-        <p>Donuts dos Simpisons</p>
-        <div class="icons">
-            <span><i class="fas fa-clock"></i> 30 min</span>
-            <span><i class="fas fa-heart"></i> 4,4 mil</span>
-            <span><i class="fas fa-comment"></i> 100 </span>
-        </div>
-    </div>
+    @for (item of receitas.receitasTematicas; track item.id) {
+    <app-receita-card [receita]="item"></app-receita-card>
+    }
 </div>
 
 <div class="copyright">
