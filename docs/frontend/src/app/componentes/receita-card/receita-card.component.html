@@ -1,5 +1,5 @@
 <div class="recipe-card" (click)="abrir_receita()">
-    <img [src]="'http://localhost:8000/' + receita.imagem_url" [alt]="receita.titulo_receita">
+    <img [src]="receita.imagem_url" [alt]="receita.titulo_receita">
     <p>{{receita.titulo_receita}}</p>
     <div class="icons">
         <span><i class="fas fa-clock"></i> {{receita.minutos_para_preparo}} min</span>

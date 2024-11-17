@@ -76,7 +76,7 @@ class ReceitaServico
     {
         $dado["tematica"] = $dado["tematica"] === "on";
         $receita = $this->gerarReceita($dado);
-        $receita->imagem_url = "/img/$imagem";
+        $receita->imagem_url = "http://" . $_SERVER["HTTP_HOST"] . "/img/$imagem";
         $receita->ingredientes = explode("\n", $_POST["ingredientes"]);
         $receita->modo_de_preparo = explode("\n", $_POST["etapas"]);
 
