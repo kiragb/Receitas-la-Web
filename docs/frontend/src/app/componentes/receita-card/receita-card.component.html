@@ -1,8 +1,8 @@
-<div class="recipe-card">
+<div class="recipe-card" (click)="abrir_receita()">
     <img [src]="'http://localhost:8000/' + receita.imagem_url" [alt]="receita.titulo_receita">
     <p>{{receita.titulo_receita}}</p>
     <div class="icons">
-        <span><i class="fas fa-clock"></i> 30 min</span>
+        <span><i class="fas fa-clock"></i> {{receita.minutos_para_preparo}} min</span>
         <span><i class="fas fa-heart"></i> 4,4 mil</span>
         <span><i class="fas fa-comment"></i> 100 </span>
     </div>

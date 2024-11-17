@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Receita } from '../../model/receita';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-receita-card',
@@ -11,4 +12,10 @@ import { Receita } from '../../model/receita';
 export class ReceitaCardComponent {
   @Input() receita: Receita = {} as Receita;
 
+  constructor(private router: Router) {
+  }
+
+  abrir_receita() {
+    this.router.navigate(['receita'], { queryParams: {'receita_id': this.receita.id } })
+  }
 }
