@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Receitas } from '../model/receitas';
 import { ReceitaCardComponent } from "../componentes/receita-card/receita-card.component";
 import { CommonModule, NgForOf } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,11 +14,14 @@ import { CommonModule, NgForOf } from '@angular/common';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  receitas: Receitas = {receitas: [], receitasTematicas: []};
-  constructor(private http: HttpClient) {
+  receitas: Receitas = { receitas: [], receitasTematicas: [] };
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
-    this.http.get<Receitas>("http://localhost:8000/php-servidor/receitas.php").subscribe(result => this.receitas = result)
+    this.route.queryParams
+      .subscribe(params => this.http.get<Receitas>("http://localhost:8000/php-servidor/receitas.php", { params })
+        .subscribe(result => this.receitas = result)
+      )
   }
 }

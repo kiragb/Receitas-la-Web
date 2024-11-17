@@ -26,15 +26,23 @@
 </div>
 <h2>ALGUMAS RECEITAS...</h2>
 <div class="recipes">
+    @if (receitas.receitas.length) {
     @for (item of receitas.receitas; track item.id) {
     <app-receita-card [receita]="item"></app-receita-card>
+    }
+    } @else {
+    <h2>Sem nenhuma receita</h2>
     }
 </div>
 
 <h2>ALGUMAS RECEITAS TEMÁTICAS...</h2>
 <div class="recipes">
+    @if (receitas.receitasTematicas.length) {
     @for (item of receitas.receitasTematicas; track item.id) {
     <app-receita-card [receita]="item"></app-receita-card>
+    }
+    } @else {
+    <h2>Sem nenhuma receita</h2>
     }
 </div>
 
