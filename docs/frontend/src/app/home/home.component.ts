@@ -4,12 +4,12 @@ import { HttpClient } from '@angular/common/http';
 import { Receitas } from '../model/receitas';
 import { ReceitaCardComponent } from "../componentes/receita-card/receita-card.component";
 import { CommonModule, NgForOf } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, ReceitaCardComponent, CommonModule],
+  imports: [NavbarComponent, ReceitaCardComponent, CommonModule, RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
