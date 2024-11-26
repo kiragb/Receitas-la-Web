@@ -1,13 +1,5 @@
 @use "../../styles.scss" as global;
 
-body {
-    background-repeat: no-repeat;
-    /* Não repetir a imagem */
-    background-position: -1150px 1350px;
-    /* Posiciona no canto inferior esquerdo */
-    background-size: 2500px;
-    /* Mantém o tamanho original da imagem */
-}
 
 @font-face {
     font-family: Sansita One;

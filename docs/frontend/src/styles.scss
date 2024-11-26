@@ -114,6 +114,25 @@ body:has(app-criar-conta) {
     align-content: center;
 }
 
+body:has(app-cadastro) {
+    background-color: #e5ddd6;
+    font-family: "Caveat Brush", cursive;
+    // display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+body:has(app-home) {
+    background-repeat: no-repeat;
+    /* Não repetir a imagem */
+    background-position: -1150px 1350px;
+    /* Posiciona no canto inferior esquerdo */
+    background-size: 2500px;
+    /* Mantém o tamanho original da imagem */
+}
+
 ol,
 ul {
     list-style: none;
