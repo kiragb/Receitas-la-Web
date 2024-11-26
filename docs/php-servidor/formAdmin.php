@@ -7,6 +7,7 @@ if (count($_POST) > 0) {
     $imagem = $servico->salvarImagem($_FILES["imagem"]);
     $sucesso = $servico->criarReceita($_POST, $imagem);
     if ($sucesso) {
-        header("Location: http://localhost:4200");
+        header("Location: https://natdfernandes.github.io/receitas-la-web");
+        // header("Location: http://localhost:4200");
     }
 }
