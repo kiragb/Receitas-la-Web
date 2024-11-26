@@ -3,13 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-login',
   standalone: true,
   imports: [RouterModule, FormsModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  templateUrl: './login.component.html',
+  styleUrls: ['../painel.scss', './login.component.scss']
 })
-export class NavbarComponent {
+export class LoginComponent {
   constructor(private router: Router) {
   }
 

@@ -1,0 +1,23 @@
+<div class="painel">
+    <div class="painel-formulario">
+        <h1>Bem vindo(a) a Receitas à la Web!</h1>
+
+        <form (ngSubmit)="onSubmit()">
+            <input class="input" name="email" type="email" placeholder="example@gmail.com" required>
+            <input class="input" name="password" type="password" placeholder="******" required>
+            <div class="opcao-usuario">
+                <label for="Lembrar-Senha">
+                    <input type="checkbox" id="Lembrar-Senha" name="lembrarSenha">
+                    Lembrar senha
+                </label>
+                <a class="link-principal" href="#">Esqueceu sua senha?</a>
+            </div>
+            <button class="btn-principal" type="submit">Acessar</button>
+        </form>
+        <hr>
+        <span>Ainda não possui uma conta? <a class="link-principal link-bold"
+                routerLink="/criar-conta">Cadastre-se</a></span>
+    </div>
+    <img src="imagem-login.jpeg" alt="imagem de um doce">
+
+</div>

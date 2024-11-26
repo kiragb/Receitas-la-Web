@@ -3,13 +3,13 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-criar-conta',
   standalone: true,
   imports: [RouterModule, FormsModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  templateUrl: './criar-conta.component.html',
+  styleUrls: ['../painel.scss', './criar-conta.component.scss']
 })
-export class NavbarComponent {
+export class CriarContaComponent {
   constructor(private router: Router) {
   }
 

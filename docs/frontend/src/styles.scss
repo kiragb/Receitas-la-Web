@@ -1,3 +1,5 @@
+$cor-plano-fundo: #e5ddd6;
+
 html,
 body,
 div,
@@ -103,6 +105,13 @@ section {
 
 body {
     line-height: 1;
+}
+
+body:has(app-login),
+body:has(app-criar-conta) {
+    background-color: $cor-plano-fundo;
+    height: 100vh;
+    align-content: center;
 }
 
 ol,

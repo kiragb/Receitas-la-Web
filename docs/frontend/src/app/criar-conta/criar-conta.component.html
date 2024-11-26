@@ -1,0 +1,23 @@
+<div class="painel">
+    <img src="imagem-cadastro.jpeg" alt="imagem de um doce">
+
+    <div class="painel-formulario">
+        <h1>Crie sua conta</h1>
+
+        <form (ngSubmit)="onSubmit()">
+            <div class="linha">
+                <input class="input" type="text" name="nome" placeholder="Nome" required>
+                <input class="input" type="text" name="Sobrenome" placeholder="Sobrenome" required>
+            </div>
+            <div class="linha">
+                <input class="input" type="email" name="email" placeholder="example@gmail.com" required>
+                <input class="input" type="password" name="password" placeholder="******" required>
+            </div>
+
+            <button class="btn-principal" type="submit">Criar conta</button>
+        </form>
+        <hr>
+        <span>Já possui uma conta? <a class="link-principal link-bold" routerLink="/login">Clique aqui</a></span>
+    </div>
+
+</div>

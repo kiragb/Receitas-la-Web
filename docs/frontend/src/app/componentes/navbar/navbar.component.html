@@ -1,5 +1,5 @@
 <div id="cabecalho">
-    <form method="get" action="/">
+    <form (ngSubmit)="onSubmit()">
         <div class="search-box">
             <input class="busca" placeholder="Buscar..." name="buscar" type="text">
             <button class="search-button"><i class="fas fa-search"></i></button>
@@ -10,6 +10,6 @@
         <a class="navLink" routerLink="" [queryParams]="{tipo:'Salgado'}">Salgados</a>
         <a class="navLink" routerLink="" [queryParams]="{tipo:'Doce'}">Doces</a>
         <a class="navLink" routerLink="" [queryParams]="{tipo:'Drinks'}">Drinks</a>
-        <a class="navButton" routerLink="login.html">Login</a>
+        <a class="navButton" routerLink="login">Login</a>
     </div>
 </div>

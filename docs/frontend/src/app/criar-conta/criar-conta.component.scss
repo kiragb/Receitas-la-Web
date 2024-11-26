@@ -1,0 +1,24 @@
+div.painel>img {
+    border-radius: 16px 0 0 16px;
+    height: 470px;
+    object-fit: cover;
+}
+
+div.linha {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    div.linha {
+        width: auto;
+        flex-direction: row;
+    }
+
+    div.linha>input {
+        width: 50%;
+    }
+}

@@ -1,0 +1,48 @@
+div.painel {
+    background-color: #FEFEFF;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    border-radius: 16px;
+}
+
+div.painel>img {
+    display: none;
+}
+
+div.painel-formulario {
+    text-align: center;
+    padding: 24px;
+    justify-content: center;
+    width: 100%;
+}
+
+div.painel-formulario,
+div.painel-formulario>form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+div.painel-formulario>hr {
+    width: 100%;
+    height: 1px;
+    background-color: #452A7540;
+    border: none;
+}
+
+@media (min-width: 1024px) {
+    div.painel {
+        width: 900px;
+    }
+
+    div.painel>img {
+        width: 50%;
+        border-radius: 0 16px 16px 0;
+        display: block;
+    }
+
+    div.painel-formulario {
+        width: 50%;
+    }
+}
